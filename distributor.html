@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Distributor — Penetrene Industrial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+        --y: #FFD000;
+        --r: #CC0000;
+        --black: #000;
+        --dark: #111;
+        --dark2: #1a1a1a;
+        --w: #fff;
+        --card: #ebebeb;
+        --display: 'Open Sans', sans-serif;
+        --body: 'Open Sans', sans-serif;
+    }
+
+    body {
+        font-family: var(--body);
+        background: var(--w);
+        color: var(--black);
+        overflow-x: hidden;
+    }
+
+    /* ── NAV ─────────────────────────────────── */
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--black);
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.85);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--w); }
+
+    .nav-distributor {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--y) !important;
+        background: transparent;
+        padding: 7px 16px;
+        border-radius: 4px;
+        border: 1.5px solid rgba(255,208,0,0.4);
+        text-decoration: none;
+        transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-distributor:hover {
+        border-color: var(--y);
+        color: var(--y) !important;
+    }
+
+    .nav-cta {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--black) !important;
+        background: var(--y);
+        padding: 8px 18px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ── NAV DROPDOWN ─────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+    .nav-dropdown > a::after { content: ''; display: block; width: 6px; height: 6px; border-right: 1.5px solid rgba(255,255,255,0.6); border-bottom: 1.5px solid rgba(255,255,255,0.6); transform: rotate(45deg) translateY(-2px); transition: transform 0.2s; }
+    .nav-dropdown:hover > a::after { transform: rotate(225deg) translateY(-2px); }
+    .nav-dropdown-panel { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-4px); background: #111; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; min-width: 200px; padding: 12px 8px 8px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.18s, transform 0.18s; box-shadow: 0 16px 48px rgba(0,0,0,0.6); }
+    .nav-dropdown:hover .nav-dropdown-panel { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(-50%) translateY(0); }
+    .nav-dropdown-panel a { display: block; font-family: var(--display); font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7) !important; text-decoration: none; padding: 10px 14px; border-radius: 5px; transition: background 0.15s, color 0.15s; }
+    .nav-dropdown-panel a:hover { background: rgba(255,255,255,0.06); color: #fff !important; }
+    .drop-icon { display: inline-block; width: 6px; height: 6px; background: #FFD000; border-radius: 50%; margin-right: 8px; vertical-align: middle; position: relative; top: -1px; }
+
+    /* ── HERO ────────────────────────────────── */
+    .page-hero {
+        background: var(--black);
+        padding: 96px 40px 0;
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
+        gap: 0;
+    }
+
+    .hero-wm {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 220px;
+        letter-spacing: 0.04em;
+        color: rgba(255,255,255,0.02);
+        text-transform: uppercase;
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    .hero-left {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 96px;
+        max-width: 560px;
+    }
+
+    .hero-eyebrow {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--y);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero-eyebrow::before {
+        content: '';
+        display: inline-block;
+        width: 24px;
+        height: 2px;
+        background: var(--y);
+        flex-shrink: 0;
+    }
+
+    .hero-left h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: clamp(44px, 5.5vw, 72px);
+        color: #EEEEF0;
+        line-height: 1.02;
+        letter-spacing: -0.025em;
+        margin-bottom: 28px;
+    }
+
+    .hero-left h1 span { color: var(--y); }
+
+    .hero-body {
+        font-size: 14px;
+        line-height: 1.75;
+        color: rgba(255,255,255,0.45);
+        max-width: 440px;
+        margin-bottom: 40px;
+    }
+
+    .hero-stats {
+        display: flex;
+        gap: 40px;
+    }
+
+    .hero-stat-val {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 36px;
+        color: var(--y);
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin-bottom: 4px;
+    }
+
+    .hero-stat-lbl {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+    }
+
+    .hero-right {
+        position: relative;
+        z-index: 1;
+        align-self: stretch;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+
+    .hero-right img {
+        max-height: 480px;
+        object-fit: contain;
+        filter: drop-shadow(0 -10px 60px rgba(255,208,0,0.08));
+        display: block;
+    }
+
+    /* ── YELLOW STRIP ────────────────────────── */
+    .yellow-strip {
+        background: var(--y);
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 56px;
+        flex-wrap: wrap;
+    }
+
+    .strip-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .strip-item svg {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: var(--black);
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        flex-shrink: 0;
+    }
+
+    .strip-item span {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--black);
+    }
+
+    /* ── BENEFITS ────────────────────────────── */
+    .benefits {
+        background: var(--w);
+        padding: 96px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .benefits-wm {
+        position: absolute;
+        left: -20px;
+        top: 40px;
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 160px;
+        letter-spacing: 0.04em;
+        color: rgba(0,0,0,0.04);
+        text-transform: uppercase;
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    .benefits-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .benefits-header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+        align-items: end;
+        margin-bottom: 72px;
+    }
+
+    .benefits-header h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 64px;
+        letter-spacing: -0.02em;
+        color: var(--black);
+        line-height: 1;
+    }
+
+    .benefits-rule {
+        width: 44px;
+        height: 4px;
+        background: var(--y);
+        margin-top: 12px;
+    }
+
+    .benefits-intro {
+        font-size: 14px;
+        line-height: 1.75;
+        color: rgba(0,0,0,0.5);
+        align-self: end;
+        padding-bottom: 6px;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .benefit-card {
+        background: var(--card);
+        border-radius: 20px;
+        padding: 36px 32px;
+        transition: background 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .benefit-card:hover { background: var(--y); }
+
+    .benefit-num {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        color: rgba(0,0,0,0.2);
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .benefit-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--black);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        transition: background 0.3s;
+    }
+
+    .benefit-card:hover .benefit-icon { background: rgba(0,0,0,0.12); }
+
+    .benefit-icon svg {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: var(--y);
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: stroke 0.3s;
+    }
+
+    .benefit-card:hover .benefit-icon svg { stroke: var(--black); }
+
+    .benefit-title {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--black);
+        margin-bottom: 10px;
+        line-height: 1.3;
+    }
+
+    .benefit-desc {
+        font-size: 13px;
+        line-height: 1.65;
+        color: rgba(0,0,0,0.5);
+        transition: color 0.3s;
+    }
+
+    .benefit-card:hover .benefit-desc { color: rgba(0,0,0,0.65); }
+
+    /* ── TIERS ───────────────────────────────── */
+    .tiers {
+        background: #111416;
+        padding: 96px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .tiers-wm {
+        position: absolute;
+        right: -20px;
+        bottom: 20px;
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 160px;
+        letter-spacing: 0.04em;
+        color: rgba(255,255,255,0.02);
+        text-transform: uppercase;
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    .tiers-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .tiers-heading {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 48px;
+        color: #EEEEF0;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+    }
+
+    .tiers-sub {
+        font-size: 13px;
+        color: rgba(255,255,255,0.35);
+        margin-bottom: 56px;
+        max-width: 480px;
+        line-height: 1.65;
+    }
+
+    .tiers-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+    }
+
+    .tier-card {
+        background: #0C0E10;
+        border: 1px solid rgba(70,72,74,0.2);
+        padding: 40px 36px;
+        position: relative;
+    }
+
+    .tier-card:first-child { border-radius: 20px 0 0 20px; }
+    .tier-card:last-child { border-radius: 0 20px 20px 0; }
+
+    .tier-card.featured {
+        background: var(--y);
+        border-color: var(--y);
+        z-index: 1;
+        transform: scaleY(1.04);
+        border-radius: 20px !important;
+        box-shadow: 0 0 0 1px rgba(255,208,0,0.3), 0 24px 60px rgba(255,208,0,0.15);
+    }
+
+    .tier-badge {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(70,72,74,0.6);
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .tier-card.featured .tier-badge {
+        color: rgba(0,0,0,0.45);
+    }
+
+    .tier-name {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 28px;
+        color: #EEEEF0;
+        margin-bottom: 6px;
+        letter-spacing: -0.01em;
+    }
+
+    .tier-card.featured .tier-name { color: var(--black); }
+
+    .tier-volume {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+        margin-bottom: 28px;
+    }
+
+    .tier-card.featured .tier-volume { color: rgba(0,0,0,0.5); }
+
+    .tier-divider {
+        width: 100%;
+        height: 1px;
+        background: rgba(70,72,74,0.2);
+        margin-bottom: 24px;
+    }
+
+    .tier-card.featured .tier-divider { background: rgba(0,0,0,0.12); }
+
+    .tier-features {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+
+    .tier-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13px;
+        color: rgba(255,255,255,0.55);
+        line-height: 1.4;
+    }
+
+    .tier-card.featured .tier-features li { color: rgba(0,0,0,0.7); }
+
+    .tier-features li::before {
+        content: '';
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: rgba(255,208,0,0.15);
+        border: 1.5px solid rgba(255,208,0,0.4);
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .tier-card.featured .tier-features li::before {
+        background: rgba(0,0,0,0.1);
+        border-color: rgba(0,0,0,0.3);
+    }
+
+    .btn-tier {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-align: center;
+        text-decoration: none;
+        transition: opacity 0.2s;
+    }
+
+    .btn-tier-outline {
+        color: rgba(255,255,255,0.6);
+        border: 1.5px solid rgba(70,72,74,0.4);
+    }
+
+    .btn-tier-outline:hover { border-color: rgba(255,255,255,0.35); color: var(--w); }
+
+    .btn-tier-dark {
+        background: var(--black);
+        color: var(--w);
+        border: 1.5px solid var(--black);
+    }
+
+    .btn-tier-dark:hover { opacity: 0.8; }
+
+    /* ── FORM ────────────────────────────────── */
+    .form-section {
+        background: var(--w);
+        padding: 96px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .form-wm {
+        position: absolute;
+        left: -20px;
+        bottom: 0;
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 160px;
+        letter-spacing: 0.04em;
+        color: rgba(0,0,0,0.03);
+        text-transform: uppercase;
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+        line-height: 1;
+    }
+
+    .form-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1.4fr;
+        gap: 96px;
+        align-items: start;
+    }
+
+    .form-intro h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 48px;
+        letter-spacing: -0.02em;
+        color: var(--black);
+        line-height: 1.05;
+        margin-bottom: 8px;
+    }
+
+    .form-rule {
+        width: 44px;
+        height: 4px;
+        background: var(--y);
+        margin-bottom: 24px;
+    }
+
+    .form-intro-body {
+        font-size: 14px;
+        line-height: 1.75;
+        color: rgba(0,0,0,0.5);
+        margin-bottom: 40px;
+    }
+
+    .form-contact-row {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .form-contact-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .form-contact-item svg {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: var(--black);
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        flex-shrink: 0;
+    }
+
+    .form-contact-lbl {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.35);
+        display: block;
+        margin-bottom: 1px;
+    }
+
+    .form-contact-val {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 15px;
+        color: var(--black);
+    }
+
+    /* form */
+    .dist-form {
+        background: #0C0E10;
+        border-radius: 20px;
+        border: 1px solid rgba(70,72,74,0.25);
+        padding: 48px 44px;
+    }
+
+    .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .form-row.full { grid-template-columns: 1fr; }
+
+    .field-group {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .field-group label {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+    }
+
+    .field-group input,
+    .field-group select,
+    .field-group textarea {
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(70,72,74,0.3);
+        border-radius: 8px;
+        padding: 12px 14px;
+        font-family: var(--display);
+        font-size: 14px;
+        color: #EEEEF0;
+        outline: none;
+        transition: border-color 0.2s;
+        width: 100%;
+    }
+
+    .field-group input::placeholder,
+    .field-group textarea::placeholder { color: rgba(255,255,255,0.2); }
+
+    .field-group input:focus,
+    .field-group select:focus,
+    .field-group textarea:focus {
+        border-color: rgba(255,208,0,0.5);
+    }
+
+    .field-group select {
+        appearance: none;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.3)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+    }
+
+    .field-group select option { background: #1a1a1a; color: #eee; }
+
+    .field-group textarea {
+        resize: vertical;
+        min-height: 110px;
+        line-height: 1.6;
+    }
+
+    .form-submit {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .form-disclaimer {
+        font-size: 11px;
+        color: rgba(255,255,255,0.2);
+        line-height: 1.5;
+        max-width: 260px;
+    }
+
+    .btn-submit {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--y);
+        color: var(--black);
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 14px 32px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+    }
+
+    .btn-submit:hover { opacity: 0.88; }
+
+    .btn-submit svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: var(--black);
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.07); padding: 56px 40px 0; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-logo { height: 34px; display: block; margin-bottom: 14px; }
+    .footer-tagline { font-family: var(--display); font-weight: 700; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--y); margin-bottom: 10px; }
+    .footer-brand p { font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 270px; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social a { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: border-color 0.2s; }
+    .footer-social a:hover { border-color: rgba(255,255,255,0.35); }
+    .footer-social svg { width: 13px; height: 13px; fill: none; stroke: rgba(255,255,255,0.45); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .footer-col-title { font-family: var(--display); font-weight: 700; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 18px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--w); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; gap: 24px; flex-wrap: wrap; }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.18); }
+    .footer-mfr-logos { display: flex; align-items: center; gap: 28px; }
+    .footer-mfr-logos img { height: 20px; opacity: 0.45; display: block; transition: opacity 0.2s; }
+    .footer-mfr-logos img:hover { opacity: 0.75; }
+    .footer-aus-logo { height: 48px !important; opacity: 0.9 !important; }
+    .footer-aus-logo:hover { opacity: 1 !important; }
+    .footer-bot-links { display: flex; gap: 20px; }
+    .footer-bot-links a { font-size: 11px; color: rgba(255,255,255,0.18); text-decoration: none; transition: color 0.2s; }
+    .footer-bot-links a:hover { color: rgba(255,255,255,0.45); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html"><img src="logo.png" alt="Penetrene" style="height:28px;display:block;"></a>
+    <ul class="nav-links">
+        <li><a href="index.html#products">Product Range</a></li>
+        <li><a href="heritage.html">Our Heritage</a></li>
+        <li class="nav-dropdown">
+            <a href="#">Resources</a>
+            <div class="nav-dropdown-panel">
+                <a href="applications.html"><span class="drop-icon"></span>Applications</a>
+                <a href="sds.html"><span class="drop-icon"></span>Safety Data Sheets</a>
+                <a href="#"><span class="drop-icon"></span>Technical Data</a>
+            </div>
+        </li>
+        <li><a href="wheretobuy.html">Where To Buy</a></li>
+        <li><a href="distributor.html" class="nav-distributor">Become a Distributor</a></li>
+        <li><a href="quote.html" class="nav-cta">Get A Quote</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+    <div class="hero-wm">Partner</div>
+    <div class="hero-left">
+        <h1>Grow Your<br>Business With<br><span>Penetrene.</span></h1>
+        <p class="hero-body">Join a network of over 200 trade distributors across Australia and New Zealand. We provide the product, the brand, and the support, you bring the territory.</p>
+        <div class="hero-stats">
+            <div>
+                <div class="hero-stat-val">200+</div>
+                <div class="hero-stat-lbl">Active Partners</div>
+            </div>
+            <div>
+                <div class="hero-stat-val">1924</div>
+                <div class="hero-stat-lbl">Established</div>
+            </div>
+            <div>
+                <div class="hero-stat-val">40%</div>
+                <div class="hero-stat-lbl">Avg. Margin</div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-right">
+        <img src="product_images/PenetreneFamily_png.png" alt="Penetrene Product Range">
+    </div>
+</section>
+
+<!-- YELLOW STRIP -->
+<div class="yellow-strip">
+    <div class="strip-item">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Exclusive Territory Rights</span>
+    </div>
+    <div class="strip-item">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        <span>Industry-Leading Margins</span>
+    </div>
+    <div class="strip-item">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>Fast-Turn Fulfilment</span>
+    </div>
+    <div class="strip-item">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        <span>Dedicated Account Manager</span>
+    </div>
+    <div class="strip-item">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        <span>Marketing & POS Support</span>
+    </div>
+</div>
+
+<!-- BENEFITS -->
+<section class="benefits">
+    <div class="benefits-wm">Benefits</div>
+    <div class="benefits-inner">
+        <div class="benefits-header">
+            <div>
+                <h2>Why Partner<br>With Us</h2>
+                <div class="benefits-rule"></div>
+            </div>
+            <p class="benefits-intro">Penetrene has been trusted by tradespeople, engineers, and industrial operators since 1924. Our distributors benefit from a product that sells itself — backed by a century of proven performance.</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <span class="benefit-num">01</span>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <p class="benefit-title">Exclusive Territory</p>
+                <p class="benefit-desc">Secured geographic exclusivity means no internal competition. Your region, your customers, your revenue.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-num">02</span>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </div>
+                <p class="benefit-title">High-Margin Product</p>
+                <p class="benefit-desc">Industry-leading distributor margins averaging 35–45%. A product with genuine repeat-purchase demand.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-num">03</span>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <p class="benefit-title">Marketing Support</p>
+                <p class="benefit-desc">Co-branded collateral, POS displays, digital assets, and campaign support — all provided at no cost.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-num">04</span>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+                </div>
+                <p class="benefit-title">Technical Training</p>
+                <p class="benefit-desc">Full product certification training for your team. Our technical team is available for site visits and trade events.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-num">05</span>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                </div>
+                <p class="benefit-title">Reliable Supply</p>
+                <p class="benefit-desc">Manufactured in Australia. Fast-turn order fulfilment with next-day dispatch on standing stock items.</p>
+            </div>
+            <div class="benefit-card">
+                <span class="benefit-num">06</span>
+                <div class="benefit-icon">
+                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                </div>
+                <p class="benefit-title">Dedicated Support</p>
+                <p class="benefit-desc">A named account manager for every partner. Direct line access, quarterly reviews, and business planning sessions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- APPLICATION FORM -->
+<section class="form-section" id="apply">
+    <div class="form-wm">Apply</div>
+    <div class="form-inner">
+        <div class="form-intro">
+            <h2>Apply to<br>Partner</h2>
+            <div class="form-rule"></div>
+            <p class="form-intro-body">Fill in the enquiry form and our partnerships team will be in touch within 2 business days. All enquiries are treated confidentially.</p>
+            <div class="form-contact-row">
+                <div class="form-contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.87 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.81 1h3a2 2 0 012 1.72 13 13 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45 13 13 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    <div>
+                        <span class="form-contact-lbl">Partnerships Team</span>
+                        <span class="form-contact-val">(03) 9398 4444</span>
+                    </div>
+                </div>
+                <div class="form-contact-item">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    <div>
+                        <span class="form-contact-lbl">Email</span>
+                        <span class="form-contact-val">sales@advancechemicals.com.au</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form class="dist-form" onsubmit="return false;">
+            <div class="form-row">
+                <div class="field-group">
+                    <label>Business Name</label>
+                    <input type="text" placeholder="Acme Industrial Supplies">
+                </div>
+                <div class="field-group">
+                    <label>Contact Name</label>
+                    <input type="text" placeholder="Jane Smith">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="field-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="jane@acmeindustrial.com.au">
+                </div>
+                <div class="field-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="(03) 0000 0000">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="field-group">
+                    <label>Business Type</label>
+                    <select>
+                        <option value="" disabled selected>Select type…</option>
+                        <option>Trade Distributor</option>
+                        <option>Hardware / Retail Chain</option>
+                        <option>Industrial Supplier</option>
+                        <option>Agricultural Supplier</option>
+                        <option>Marine & Boating</option>
+                        <option>Automotive</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="field-group">
+                    <label>Partnership Tier</label>
+                    <select>
+                        <option value="" disabled selected>Select tier…</option>
+                        <option>Authorised (500+ units/yr)</option>
+                        <option>Preferred (2,000+ units/yr)</option>
+                        <option>Strategic (10,000+ units/yr)</option>
+                        <option>Not sure yet</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row full">
+                <div class="field-group">
+                    <label>Territory / Region</label>
+                    <input type="text" placeholder="e.g. Victoria, South Australia">
+                </div>
+            </div>
+            <div class="form-row full">
+                <div class="field-group">
+                    <label>Tell us about your business</label>
+                    <textarea placeholder="Brief overview of your current business, customer base, and why you'd like to distribute Penetrene…"></textarea>
+                </div>
+            </div>
+            <div class="form-submit">
+                <p class="form-disclaimer">We'll respond within 2 business days. Your information is kept strictly confidential.</p>
+                <button type="submit" class="btn-submit">
+                    Submit Enquiry
+                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="logo.png" alt="Penetrene" class="footer-logo">
+                <p class="footer-tagline">The Red Oil That Creeps</p>
+                <p>Precision engineered since 1924 for heavy industry, maritime, and maintenance applications across Australia.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Email">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                    <a href="#" aria-label="Share">
+                        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Product</p>
+                <ul>
+                    <li><a href="index.html#products">Product Range</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="sds.html">Safety Data Sheets</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Company</p>
+                <ul>
+                    <li><a href="heritage.html">Our Heritage</a></li>
+                    <li><a href="wheretobuy.html">Where To Buy</a></li>
+                    <li><a href="distributor.html">Become a Distributor</a></li>
+                    <li><a href="quote.html">Get A Quote</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">&copy; 2026 Penetrene Industrial. All rights reserved.</span>
+            <div class="footer-mfr-logos">
+                <img src="brand_assets/AusrtralianMADE.png" alt="Australian Made and Owned" class="footer-aus-logo">
+                <img src="brand_assets/advancelogowhite.png" alt="Advance Chemicals">
+                <img src="brand_assets/QuickSmartLogoWhite.png" alt="Quick Smart Products">
+            </div>
+            <div class="footer-bot-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

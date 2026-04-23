@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Heritage — Penetrene Industrial Since 1924</title>
+    <meta name="description" content="Penetrene has been Australia's trusted industrial lubricant and rust penetrant since 1924. 100 years of The Red Oil That Creeps.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,800&family=Space+Grotesk:wght@700;800&family=Playfair+Display:ital,wght@0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+        --y: #FFD000;
+        --r: #CC0000;
+        --black: #000;
+        --dark: #111;
+        --dark2: #1a1a1a;
+        --w: #fff;
+        --card: #ebebeb;
+        --parchment: #F5F0E8;
+        --ink: #1A1510;
+        --display: 'Open Sans', sans-serif;
+        --body: 'Open Sans', sans-serif;
+        --serif: 'Playfair Display', serif;
+    }
+
+    body {
+        font-family: var(--body);
+        background: var(--ink);
+        color: var(--w);
+        overflow-x: hidden;
+    }
+
+    /* ── NAV ─────────────────────────────────── */
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--black);
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.85);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--w); }
+
+    .nav-distributor {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.85) !important;
+        background: transparent;
+        padding: 7px 16px;
+        border-radius: 4px;
+        border: 1.5px solid rgba(255,255,255,0.25);
+        text-decoration: none;
+        transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-distributor:hover { border-color: rgba(255,255,255,0.6); color: var(--w) !important; }
+
+    .nav-cta {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--black) !important;
+        background: var(--y);
+        padding: 8px 18px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ── NAV DROPDOWN ─────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+    .nav-dropdown > a::after { content: ''; display: block; width: 6px; height: 6px; border-right: 1.5px solid rgba(255,255,255,0.6); border-bottom: 1.5px solid rgba(255,255,255,0.6); transform: rotate(45deg) translateY(-2px); transition: transform 0.2s; }
+    .nav-dropdown:hover > a::after { transform: rotate(225deg) translateY(-2px); }
+    .nav-dropdown-panel { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-4px); background: #111; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; min-width: 200px; padding: 12px 8px 8px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.18s, transform 0.18s; box-shadow: 0 16px 48px rgba(0,0,0,0.6); }
+    .nav-dropdown:hover .nav-dropdown-panel { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(-50%) translateY(0); }
+    .nav-dropdown-panel a { display: block; font-family: var(--display); font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7) !important; text-decoration: none; padding: 10px 14px; border-radius: 5px; transition: background 0.15s, color 0.15s; }
+    .nav-dropdown-panel a:hover { background: rgba(255,255,255,0.06); color: #fff !important; }
+    .drop-icon { display: inline-block; width: 6px; height: 6px; background: #FFD000; border-radius: 50%; margin-right: 8px; vertical-align: middle; position: relative; top: -1px; }
+
+    /* ── HERO ────────────────────────────────── */
+    .hero {
+        background: var(--ink);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+        padding: 0 40px 80px;
+    }
+
+    /* Aged paper grain texture */
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+        pointer-events: none;
+        opacity: 0.6;
+    }
+
+    .hero-year {
+        position: absolute;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: 380px;
+        color: rgba(255,208,0,0.04);
+        line-height: 1;
+        pointer-events: none;
+        user-select: none;
+        letter-spacing: -0.04em;
+        white-space: nowrap;
+    }
+
+    .hero-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-rule-top {
+        width: 100%;
+        height: 1px;
+        background: rgba(255,255,255,0.08);
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .hero-rule-top::before {
+        content: 'EST. 1924 — AUSTRALIA';
+        position: absolute;
+        left: 0;
+        top: -10px;
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        color: rgba(255,208,0,0.6);
+        background: var(--ink);
+        padding-right: 16px;
+    }
+
+    .hero-tagline {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 700;
+        font-size: clamp(13px, 1.4vw, 18px);
+        color: rgba(255,255,255,0.35);
+        letter-spacing: 0.06em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    .hero-h1 {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: clamp(64px, 9vw, 136px);
+        line-height: 0.92;
+        letter-spacing: -0.03em;
+        color: #EEEEF0;
+        margin-bottom: 40px;
+    }
+
+    .hero-h1 em {
+        font-style: italic;
+        color: var(--y);
+    }
+
+    .hero-bottom-row {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    .hero-desc {
+        font-size: 14px;
+        line-height: 1.75;
+        color: rgba(255,255,255,0.4);
+        max-width: 420px;
+    }
+
+    .hero-decade-row {
+        display: flex;
+        gap: 28px;
+        align-items: flex-end;
+        flex-shrink: 0;
+    }
+
+    .hero-decade {
+        text-align: right;
+    }
+
+    .hero-decade-val {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: 48px;
+        color: var(--y);
+        line-height: 1;
+        letter-spacing: -0.02em;
+    }
+
+    .hero-decade-lbl {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.25);
+        margin-top: 4px;
+    }
+
+    /* ── MANIFESTO STRIP ─────────────────────── */
+    .manifesto {
+        background: var(--y);
+        padding: 28px 40px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .manifesto-track {
+        display: flex;
+        gap: 48px;
+        white-space: nowrap;
+        animation: marquee 28s linear infinite;
+        width: max-content;
+    }
+
+    .manifesto-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 700;
+        font-size: 20px;
+        color: var(--black);
+        flex-shrink: 0;
+    }
+
+    .manifesto-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: rgba(0,0,0,0.3);
+        flex-shrink: 0;
+    }
+
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-50%); }
+    }
+
+    /* ── ORIGIN STORY ────────────────────────── */
+    .origin {
+        background: var(--parchment);
+        padding: 120px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .origin::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 27px,
+            rgba(0,0,0,0.04) 28px
+        );
+        pointer-events: none;
+    }
+
+    .origin-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 96px;
+        align-items: start;
+    }
+
+    .origin-left {}
+
+    .origin-kicker {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 9px;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.35);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .origin-kicker::before {
+        content: '';
+        width: 24px;
+        height: 1px;
+        background: rgba(0,0,0,0.3);
+    }
+
+    .origin-h2 {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: clamp(44px, 5vw, 72px);
+        color: var(--ink);
+        line-height: 1.02;
+        letter-spacing: -0.025em;
+        margin-bottom: 32px;
+    }
+
+    .origin-h2 em {
+        font-style: italic;
+        color: var(--r);
+    }
+
+    .origin-body {
+        font-size: 15px;
+        line-height: 1.8;
+        color: rgba(26,21,16,0.65);
+        margin-bottom: 20px;
+    }
+
+    .origin-body strong {
+        color: var(--ink);
+        font-weight: 700;
+    }
+
+    .origin-pull {
+        border-left: 3px solid var(--y);
+        padding-left: 24px;
+        margin: 40px 0;
+    }
+
+    .origin-pull p {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 22px;
+        line-height: 1.45;
+        color: var(--ink);
+        font-weight: 700;
+    }
+
+    /* right side: large year + stamp */
+    .origin-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 20px;
+    }
+
+    .origin-year-display {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: 200px;
+        color: var(--ink);
+        line-height: 1;
+        letter-spacing: -0.04em;
+        opacity: 0.08;
+        align-self: flex-end;
+        margin-bottom: -40px;
+    }
+
+    .origin-stamp-card {
+        background: var(--ink);
+        border-radius: 4px;
+        padding: 40px 40px;
+        width: 100%;
+        position: relative;
+    }
+
+    .origin-stamp-label {
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255,208,0,0.5);
+        margin-bottom: 24px;
+        display: block;
+    }
+
+    .origin-stamp-name {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-style: italic;
+        font-size: 36px;
+        color: var(--y);
+        line-height: 1.1;
+        margin-bottom: 4px;
+    }
+
+    .origin-stamp-sub {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+        margin-bottom: 32px;
+    }
+
+    .origin-stamp-divider {
+        width: 100%;
+        height: 1px;
+        background: rgba(255,255,255,0.08);
+        margin-bottom: 24px;
+    }
+
+    .origin-fact-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+    }
+
+    .origin-fact-key {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+    }
+
+    .origin-fact-val {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 13px;
+        color: #EEEEF0;
+        text-align: right;
+    }
+
+    /* ── TIMELINE ────────────────────────────── */
+    .timeline-section {
+        background: var(--ink);
+        padding: 120px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .timeline-wm {
+        position: absolute;
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: 260px;
+        color: rgba(255,255,255,0.015);
+        pointer-events: none;
+        user-select: none;
+        line-height: 1;
+        letter-spacing: -0.04em;
+    }
+
+    .timeline-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .timeline-header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin-bottom: 96px;
+        gap: 40px;
+    }
+
+    .timeline-h2 {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: clamp(40px, 5vw, 64px);
+        color: #EEEEF0;
+        letter-spacing: -0.025em;
+        line-height: 1.02;
+    }
+
+    .timeline-h2 em { font-style: italic; color: var(--y); }
+
+    .timeline-intro {
+        font-size: 13px;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.3);
+        max-width: 340px;
+        text-align: right;
+    }
+
+    /* vertical timeline */
+    .timeline {
+        position: relative;
+        padding-left: 80px;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background: linear-gradient(to bottom, var(--y), rgba(255,208,0,0.1));
+    }
+
+    .tl-item {
+        position: relative;
+        padding-bottom: 72px;
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 48px;
+        align-items: start;
+    }
+
+    .tl-item:last-child { padding-bottom: 0; }
+
+    .tl-dot {
+        position: absolute;
+        left: -5px;
+        top: 8px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--y);
+        box-shadow: 0 0 0 4px rgba(255,208,0,0.12);
+    }
+
+    .tl-year {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: 28px;
+        color: var(--y);
+        letter-spacing: -0.02em;
+        line-height: 1;
+        padding-top: 4px;
+    }
+
+    .tl-content {}
+
+    .tl-headline {
+        font-family: var(--serif);
+        font-weight: 700;
+        font-size: 22px;
+        color: #EEEEF0;
+        margin-bottom: 10px;
+        line-height: 1.2;
+    }
+
+    .tl-body {
+        font-size: 13px;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.4);
+        max-width: 600px;
+    }
+
+    .tl-tag {
+        display: inline-block;
+        margin-top: 12px;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.7);
+        background: var(--y);
+        border-radius: 3px;
+        padding: 3px 8px;
+    }
+
+    /* ── FORMULA SECTION ─────────────────────── */
+    .formula {
+        background: #0A0800;
+        padding: 120px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* yellow glow */
+    .formula::before {
+        content: '';
+        position: absolute;
+        top: -200px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 800px;
+        height: 400px;
+        background: radial-gradient(ellipse, rgba(255,208,0,0.06), transparent 70%);
+        pointer-events: none;
+    }
+
+    .formula-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 96px;
+        align-items: center;
+    }
+
+    .formula-kicker {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 9px;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--y);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .formula-kicker::before {
+        content: '';
+        width: 24px;
+        height: 1px;
+        background: var(--y);
+    }
+
+    .formula-h2 {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: clamp(36px, 4vw, 56px);
+        color: #EEEEF0;
+        letter-spacing: -0.025em;
+        line-height: 1.06;
+        margin-bottom: 28px;
+    }
+
+    .formula-h2 em { font-style: italic; color: var(--y); }
+
+    .formula-body {
+        font-size: 14px;
+        line-height: 1.8;
+        color: rgba(255,255,255,0.4);
+        margin-bottom: 16px;
+    }
+
+    /* right: properties grid */
+    .formula-props {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px;
+    }
+
+    .formula-prop {
+        background: rgba(255,208,0,0.04);
+        border: 1px solid rgba(255,208,0,0.1);
+        padding: 28px 24px;
+    }
+
+    .formula-prop:first-child { border-radius: 16px 0 0 0; }
+    .formula-prop:nth-child(2) { border-radius: 0 16px 0 0; }
+    .formula-prop:nth-child(3) { border-radius: 0 0 0 16px; }
+    .formula-prop:last-child { border-radius: 0 0 16px 0; }
+
+    .formula-prop-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: rgba(255,208,0,0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+    }
+
+    .formula-prop-icon svg {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: var(--y);
+        stroke-width: 1.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .formula-prop-title {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 13px;
+        color: #EEEEF0;
+        margin-bottom: 6px;
+    }
+
+    .formula-prop-desc {
+        font-size: 12px;
+        line-height: 1.6;
+        color: rgba(255,255,255,0.3);
+    }
+
+    /* ── LINIMENT CHAPTER ────────────────────── */
+    .liniment {
+        background: var(--parchment);
+        padding: 120px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .liniment::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 27px,
+            rgba(0,0,0,0.04) 28px
+        );
+        pointer-events: none;
+    }
+
+    .liniment-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .liniment-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 96px;
+        align-items: center;
+    }
+
+    .liniment-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--ink);
+        background: var(--y);
+        padding: 5px 10px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
+
+    .liniment-h2 {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: clamp(40px, 4.5vw, 60px);
+        color: var(--ink);
+        letter-spacing: -0.025em;
+        line-height: 1.02;
+        margin-bottom: 8px;
+    }
+
+    .liniment-h2 em { font-style: italic; color: var(--r); }
+
+    .liniment-sub {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 18px;
+        color: rgba(26,21,16,0.45);
+        margin-bottom: 32px;
+    }
+
+    .liniment-body {
+        font-size: 14px;
+        line-height: 1.8;
+        color: rgba(26,21,16,0.6);
+        margin-bottom: 16px;
+    }
+
+    .liniment-body strong { color: var(--ink); font-weight: 700; }
+
+    /* right: archival card */
+    .liniment-card {
+        background: var(--ink);
+        border-radius: 4px;
+        padding: 48px 44px;
+        position: relative;
+    }
+
+    .liniment-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        background: var(--y);
+    }
+
+    .liniment-card-header {
+        font-family: 'Courier New', monospace;
+        font-size: 9px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(255,208,0,0.4);
+        margin-bottom: 28px;
+        display: block;
+    }
+
+    .liniment-card-title {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: 32px;
+        color: #EEEEF0;
+        margin-bottom: 4px;
+        line-height: 1.1;
+    }
+
+    .liniment-card-subtitle {
+        font-family: var(--serif);
+        font-style: italic;
+        font-size: 16px;
+        color: var(--y);
+        margin-bottom: 28px;
+    }
+
+    .liniment-card-divider {
+        width: 100%;
+        height: 1px;
+        background: rgba(255,255,255,0.07);
+        margin-bottom: 24px;
+    }
+
+    .liniment-use-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .liniment-use-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        font-size: 13px;
+        color: rgba(255,255,255,0.45);
+        line-height: 1.5;
+    }
+
+    .liniment-use-list li::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: var(--y);
+        flex-shrink: 0;
+        margin-top: 7px;
+    }
+
+    .liniment-note {
+        margin-top: 28px;
+        padding: 16px;
+        background: rgba(255,208,0,0.04);
+        border-radius: 6px;
+        border: 1px solid rgba(255,208,0,0.1);
+        font-size: 11px;
+        color: rgba(255,255,255,0.25);
+        line-height: 1.6;
+        font-style: italic;
+    }
+
+    /* ── MADE IN AUSTRALIA ───────────────────── */
+    .made-in {
+        background: var(--y);
+        padding: 96px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .made-wm {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: 240px;
+        color: rgba(0,0,0,0.05);
+        pointer-events: none;
+        user-select: none;
+        white-space: nowrap;
+        line-height: 1;
+        letter-spacing: -0.04em;
+    }
+
+    .made-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 96px;
+        align-items: center;
+    }
+
+    .made-h2 {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: clamp(44px, 5.5vw, 72px);
+        color: var(--ink);
+        letter-spacing: -0.03em;
+        line-height: 0.96;
+        margin-bottom: 28px;
+    }
+
+    .made-body {
+        font-size: 15px;
+        line-height: 1.75;
+        color: rgba(0,0,0,0.6);
+        margin-bottom: 16px;
+    }
+
+    .made-body strong { color: var(--ink); font-weight: 700; }
+
+    .made-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .made-stat {
+        background: rgba(0,0,0,0.06);
+        border-radius: 16px;
+        padding: 28px 24px;
+    }
+
+    .made-stat-val {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: 44px;
+        color: var(--ink);
+        line-height: 1;
+        letter-spacing: -0.025em;
+        margin-bottom: 6px;
+    }
+
+    .made-stat-lbl {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.5);
+        line-height: 1.4;
+    }
+
+    /* ── RANGE TODAY ─────────────────────────── */
+    .range-today {
+        background: var(--ink);
+        padding: 120px 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .range-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    .range-header {
+        text-align: center;
+        margin-bottom: 72px;
+    }
+
+    .range-kicker {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 9px;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: var(--y);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .range-kicker::before, .range-kicker::after {
+        content: '';
+        width: 32px;
+        height: 1px;
+        background: var(--y);
+    }
+
+    .range-h2 {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: clamp(40px, 5vw, 64px);
+        color: #EEEEF0;
+        letter-spacing: -0.025em;
+        line-height: 1.02;
+    }
+
+    .range-h2 em { font-style: italic; color: var(--y); }
+
+    .range-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2px;
+    }
+
+    .range-card {
+        background: #0C0E10;
+        border: 1px solid rgba(70,72,74,0.2);
+        padding: 36px 28px 28px;
+        display: flex;
+        flex-direction: column;
+        transition: background 0.3s, border-color 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .range-card:first-child { border-radius: 20px 0 0 20px; }
+    .range-card:last-child { border-radius: 0 20px 20px 0; }
+
+    .range-card:hover {
+        background: var(--y);
+        border-color: var(--y);
+    }
+
+    .range-card-img {
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .range-card-img img {
+        max-height: 140px;
+        max-width: 100%;
+        object-fit: contain;
+        filter: drop-shadow(0 8px 20px rgba(0,0,0,0.6));
+        transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    .range-card:hover .range-card-img img { transform: scale(1.15) translateY(-6px); }
+
+    .range-card-divider {
+        width: 100%;
+        height: 1px;
+        background: rgba(255,255,255,0.07);
+        margin-bottom: 16px;
+        transition: background 0.3s;
+    }
+
+    .range-card:hover .range-card-divider { background: rgba(0,0,0,0.12); }
+
+    .range-card-size {
+        font-family: var(--display);
+        font-weight: 800;
+        font-size: 22px;
+        color: #EEEEF0;
+        margin-bottom: 4px;
+        transition: color 0.3s;
+    }
+
+    .range-card:hover .range-card-size { color: var(--ink); }
+
+    .range-card-desc {
+        font-size: 11px;
+        color: rgba(255,255,255,0.3);
+        line-height: 1.5;
+        transition: color 0.3s;
+        flex: 1;
+    }
+
+    .range-card:hover .range-card-desc { color: rgba(0,0,0,0.55); }
+
+    /* ── LEGACY STRIP ────────────────────────── */
+    .legacy {
+        background: #0A0800;
+        border-top: 1px solid rgba(255,208,0,0.1);
+        border-bottom: 1px solid rgba(255,208,0,0.1);
+        padding: 72px 40px;
+    }
+
+    .legacy-inner {
+        max-width: 1216px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0;
+    }
+
+    .legacy-stat {
+        padding: 0 40px;
+        border-right: 1px solid rgba(255,208,0,0.1);
+        text-align: center;
+    }
+
+    .legacy-stat:first-child { padding-left: 0; }
+    .legacy-stat:last-child { border-right: none; padding-right: 0; }
+
+    .legacy-val {
+        font-family: var(--serif);
+        font-weight: 900;
+        font-size: 64px;
+        color: var(--y);
+        line-height: 1;
+        letter-spacing: -0.03em;
+        margin-bottom: 8px;
+    }
+
+    .legacy-lbl {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.3);
+        line-height: 1.5;
+    }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.07); padding: 56px 40px 0; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-logo { height: 34px; display: block; margin-bottom: 14px; }
+    .footer-tagline { font-family: var(--display); font-weight: 700; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--y); margin-bottom: 10px; }
+    .footer-brand p { font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 270px; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social a { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: border-color 0.2s; }
+    .footer-social a:hover { border-color: rgba(255,255,255,0.35); }
+    .footer-social svg { width: 13px; height: 13px; fill: none; stroke: rgba(255,255,255,0.45); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .footer-col-title { font-family: var(--display); font-weight: 700; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 18px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--w); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; gap: 24px; flex-wrap: wrap; }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.18); }
+    .footer-mfr-logos { display: flex; align-items: center; gap: 28px; }
+    .footer-mfr-logos img { height: 20px; opacity: 0.45; display: block; transition: opacity 0.2s; }
+    .footer-mfr-logos img:hover { opacity: 0.75; }
+    .footer-aus-logo { height: 48px !important; opacity: 0.9 !important; }
+    .footer-aus-logo:hover { opacity: 1 !important; }
+    .footer-bot-links { display: flex; gap: 20px; }
+    .footer-bot-links a { font-size: 11px; color: rgba(255,255,255,0.18); text-decoration: none; transition: color 0.2s; }
+    .footer-bot-links a:hover { color: rgba(255,255,255,0.45); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html"><img src="logo.png" alt="Penetrene" style="height:28px;display:block;"></a>
+    <ul class="nav-links">
+        <li><a href="index.html#products">Product Range</a></li>
+        <li><a href="heritage.html" style="color:#FFD000;">Our Heritage</a></li>
+        <li class="nav-dropdown">
+            <a href="#">Resources</a>
+            <div class="nav-dropdown-panel">
+                <a href="applications.html"><span class="drop-icon"></span>Applications</a>
+                <a href="sds.html"><span class="drop-icon"></span>Safety Data Sheets</a>
+                <a href="#"><span class="drop-icon"></span>Technical Data</a>
+            </div>
+        </li>
+        <li><a href="wheretobuy.html">Where To Buy</a></li>
+        <li><a href="distributor.html" class="nav-distributor">Become a Distributor</a></li>
+        <li><a href="quote.html" class="nav-cta">Get A Quote</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-year">1924</div>
+    <div class="hero-inner">
+        <div class="hero-rule-top"></div>
+        <p class="hero-tagline">One Hundred Years of Australian Industry</p>
+        <h1 class="hero-h1">The <em>Red Oil</em><br>That Creeps.</h1>
+        <div class="hero-bottom-row">
+            <p class="hero-desc">Born in Australia in 1924 and trusted by tradespeople, engineers, farmers, and mariners for over a century. Penetrene is not just a product — it is part of the fabric of Australian industry.</p>
+            <div class="hero-decade-row">
+                <div class="hero-decade">
+                    <div class="hero-decade-val">100+</div>
+                    <div class="hero-decade-lbl">Years of Trust</div>
+                </div>
+                <div class="hero-decade">
+                    <div class="hero-decade-val">1924</div>
+                    <div class="hero-decade-lbl">Year Founded</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="manifesto">
+    <div class="manifesto-track">
+        <div class="manifesto-item"><span class="manifesto-dot"></span>The Red Oil That Creeps</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>Established 1924</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>Made in Australia</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>Penetrates. Protects. Persists.</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>100 Years of Industry</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>Quick Smart Products</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>The Red Oil That Creeps</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>Established 1924</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>Made in Australia</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>Penetrates. Protects. Persists.</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>100 Years of Industry</div>
+        <div class="manifesto-item"><span class="manifesto-dot"></span>Quick Smart Products</div>
+    </div>
+</div>
+
+<!-- ORIGIN STORY -->
+<section class="origin">
+    <div class="origin-inner">
+        <div class="origin-left">
+            <p class="origin-kicker">Origin Story</p>
+            <h2 class="origin-h2">Australia's<br>Most Enduring<br><em>Industrial Formula</em></h2>
+            <p class="origin-body">In 1924, Australian industry was building itself from the ground up. Mines were going deeper, farms were growing larger, and the machinery holding it all together needed a product that could match the demands of a continent-scale nation being forged by hand.</p>
+            <p class="origin-body">Penetrene was that product. Introduced as a <strong>heavy-duty rust penetrant and protectant</strong>, it quickly became known for doing what no other product could — creeping into the tightest, most corroded spaces, fracturing rust bonds, and leaving behind a lasting protective film.</p>
+
+            <div class="origin-pull">
+                <p>"It doesn't just sit on the surface — it creeps. That's the difference. One application and it keeps working long after other products have dried up and been forgotten."</p>
+            </div>
+
+            <p class="origin-body">Unlike many modern lubricants, Penetrene's formula is built on a <strong>non-evaporating base</strong>. Where competitors flash off and leave metal unprotected within hours, Penetrene continues to work — displacing moisture, inhibiting corrosion, and lubricating moving parts long after application.</p>
+            <p class="origin-body">Today, manufactured in Australia by <strong>Quick Smart Products</strong>, Penetrene remains true to its original formulation while meeting modern safety and compliance standards. The name may be iconic, but the performance has never needed to change.</p>
+        </div>
+        <div class="origin-right">
+            <div class="origin-year-display">1924</div>
+            <div class="origin-stamp-card">
+                <span class="origin-stamp-label">Product_Registry: Original_Formulation</span>
+                <p class="origin-stamp-name">Penetrene</p>
+                <p class="origin-stamp-sub">Industrial Red Oil — Australian Formula</p>
+                <div class="origin-stamp-divider"></div>
+                <div class="origin-fact-row">
+                    <span class="origin-fact-key">Year Introduced</span>
+                    <span class="origin-fact-val">1924</span>
+                </div>
+                <div class="origin-fact-row">
+                    <span class="origin-fact-key">Country of Origin</span>
+                    <span class="origin-fact-val">Australia</span>
+                </div>
+                <div class="origin-fact-row">
+                    <span class="origin-fact-key">Manufacturer</span>
+                    <span class="origin-fact-val">Quick Smart Products</span>
+                </div>
+                <div class="origin-fact-row">
+                    <span class="origin-fact-key">Known As</span>
+                    <span class="origin-fact-val">The Red Oil That Creeps</span>
+                </div>
+                <div class="origin-fact-row">
+                    <span class="origin-fact-key">Base Formula</span>
+                    <span class="origin-fact-val">Non-Evaporating</span>
+                </div>
+                <div class="origin-fact-row">
+                    <span class="origin-fact-key">Primary Use</span>
+                    <span class="origin-fact-val">Rust Penetrant & Protectant</span>
+                </div>
+                <div class="origin-fact-row">
+                    <span class="origin-fact-key">Years of Production</span>
+                    <span class="origin-fact-val">100+ continuous</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TIMELINE -->
+<section class="timeline-section">
+    <div class="timeline-wm">Century</div>
+    <div class="timeline-inner">
+        <div class="timeline-header">
+            <h2 class="timeline-h2">A Century<br>of <em>Australian</em><br>Industry</h2>
+            <p class="timeline-intro">From the roaring workshops of the 1920s to today's precision mining and agricultural operations — Penetrene has been present at every major chapter of Australian industrial history.</p>
+        </div>
+        <div class="timeline">
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">1924</div>
+                <div class="tl-content">
+                    <p class="tl-headline">The Red Oil Is Born</p>
+                    <p class="tl-body">Penetrene is introduced to the Australian market as a heavy-duty industrial rust penetrant and protectant. Designed for the demanding conditions of early Australian manufacturing, mining, and pastoral industries, it quickly earns a reputation for performance unlike anything available at the time.</p>
+                    <span class="tl-tag">Foundation</span>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">1930s</div>
+                <div class="tl-content">
+                    <p class="tl-headline">The Depression Years — When Tools Had to Last</p>
+                    <p class="tl-body">During the Great Depression, Australian workshops couldn't afford to replace seized or corroded equipment. Penetrene became essential — a way to extend the life of machinery that couldn't be replaced. Its reputation as a product that works when others fail was forged in these years of necessity.</p>
+                    <span class="tl-tag">Great Depression Era</span>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">1940s</div>
+                <div class="tl-content">
+                    <p class="tl-headline">War-Era Industrial Production</p>
+                    <p class="tl-body">Australia's wartime industrial surge placed enormous demands on machinery and maintenance products. Penetrene's non-acid, non-corrosive formula made it suitable for protecting critical mechanical and electrical components in harsh conditions, and it became a staple in Australian manufacturing facilities supporting the war effort.</p>
+                    <span class="tl-tag">World War II</span>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">1950s–60s</div>
+                <div class="tl-content">
+                    <p class="tl-headline">The Agricultural Expansion</p>
+                    <p class="tl-body">Australia's postwar agricultural boom brought Penetrene to the farm. As mechanised farming expanded across Queensland, NSW, and Victoria, Penetrene became the go-to solution for farmers battling corroded seasonal machinery. Its penetrating action on fertiliser-corroded fittings and seized implement bolts made it indispensable at seeding and harvest time.</p>
+                    <span class="tl-tag">Agricultural Adoption</span>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">1960s–70s</div>
+                <div class="tl-content">
+                    <p class="tl-headline">Penetrene Liniment — An Unexpected Chapter</p>
+                    <p class="tl-body">In one of the more remarkable chapters in Penetrene's history, a veterinary variant known as <strong>Penetrene Liniment</strong> gained widespread use in the Australian pastoral industry for treating joint pain and inflammation in horses and dogs. The product became a trusted name in working animal care, reflecting the remarkable versatility of the core Penetrene formula.</p>
+                    <span class="tl-tag">Veterinary Use</span>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">1980s–90s</div>
+                <div class="tl-content">
+                    <p class="tl-headline">Mining Industry Adoption</p>
+                    <p class="tl-body">Australia's mining boom brought Penetrene underground and into open-cut operations across Western Australia, Queensland, and New South Wales. Its extraordinary dielectric strength (35,000 volts) made it the preferred choice for protecting electrical connections in high-moisture underground environments — a property that competitors couldn't match.</p>
+                    <span class="tl-tag">Mining Expansion</span>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">2000s</div>
+                <div class="tl-content">
+                    <p class="tl-headline">Product Range Expansion</p>
+                    <p class="tl-body">Responding to the diverse needs of trade professionals, Penetrene expands its available formats — from the iconic squeeze bottle to aerosol, pump spray, and bulk drum formats. The 400g aerosol becomes a bestseller in the automotive trade, while 20L and 200L bulk containers cement Penetrene's position as the industrial standard for high-volume operations.</p>
+                    <span class="tl-tag">Range Growth</span>
+                </div>
+            </div>
+
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-year">2024</div>
+                <div class="tl-content">
+                    <p class="tl-headline">One Hundred Years of The Red Oil</p>
+                    <p class="tl-body">Penetrene marks its centenary as Australia's most enduring industrial lubricant and rust penetrant. Still manufactured in Australia by Quick Smart Products. Still built on its original non-evaporating base formula. Still earning the trust of engineers, tradespeople, farmers, and mariners across the country. Some things don't need to change — they just need to keep working.</p>
+                    <span class="tl-tag">Centenary</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- THE FORMULA -->
+<section class="formula">
+    <div class="formula-inner">
+        <div>
+            <p class="formula-kicker">The Science Behind It</p>
+            <h2 class="formula-h2">A Formula That<br><em>Never Stops</em><br>Working</h2>
+            <p class="formula-body">Most penetrating oils evaporate. They creep in, free the fastener, and then disappear — leaving the metal exposed again within hours. Penetrene was built differently from the very beginning.</p>
+            <p class="formula-body">Its non-evaporating base means the formula stays on the surface after application. It continues to displace moisture, inhibit new corrosion, and maintain lubrication long after competitors have dried up. That's what makes Penetrene a protectant as much as a penetrant.</p>
+            <p class="formula-body">Non-flammable and non-acid, it is safe for use on virtually all metals, most plastics, and rubber — including in sensitive environments like electrical switchgear, food-processing facilities, and around waterways.</p>
+        </div>
+        <div class="formula-props">
+            <div class="formula-prop">
+                <div class="formula-prop-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C12 2 8 7 8 12a4 4 0 008 0c0-5-4-10-4-10z"/></svg>
+                </div>
+                <p class="formula-prop-title">Non-Evaporating Base</p>
+                <p class="formula-prop-desc">Stays on the surface and keeps working. Does not flash off like solvent-based competitors.</p>
+            </div>
+            <div class="formula-prop">
+                <div class="formula-prop-icon">
+                    <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <p class="formula-prop-title">35,000V Dielectric</p>
+                <p class="formula-prop-desc">Safe to apply to live electrical connections. Protects switchgear and terminals without shutdown.</p>
+            </div>
+            <div class="formula-prop">
+                <div class="formula-prop-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <p class="formula-prop-title">Non-Acid, Non-Flammable</p>
+                <p class="formula-prop-desc">Safe for use around plastics, rubber, painted surfaces, and most industrial environments.</p>
+            </div>
+            <div class="formula-prop">
+                <div class="formula-prop-icon">
+                    <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                </div>
+                <p class="formula-prop-title">99.8% Corrosion Resistance</p>
+                <p class="formula-prop-desc">Laboratory-verified protection that outperforms modern synthetic alternatives in field conditions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- MADE IN AUSTRALIA -->
+<section class="made-in">
+    <div class="made-wm">Australia</div>
+    <div class="made-inner">
+        <div>
+            <h2 class="made-h2">Proudly<br>Made In<br>Australia.</h2>
+            <p class="made-body">Penetrene is manufactured in Australia by <strong>Quick Smart Products</strong> — a company committed to keeping Australian industrial chemistry on Australian soil.</p>
+            <p class="made-body">In an era when manufacturing has migrated offshore, Penetrene remains a product made here, for the conditions here, by people who understand what Australian industry demands. Every litre is produced to stringent quality standards, batch-tested for consistency, and supplied with full Australian regulatory documentation.</p>
+            <p class="made-body">Supporting Penetrene is supporting Australian manufacturing — a century-old tradition worth protecting.</p>
+        </div>
+        <div class="made-right">
+            <div class="made-stat">
+                <div class="made-stat-val">100+</div>
+                <div class="made-stat-lbl">Years of Continuous<br>Australian Production</div>
+            </div>
+            <div class="made-stat">
+                <div class="made-stat-val">AUS</div>
+                <div class="made-stat-lbl">Manufactured<br>in Australia</div>
+            </div>
+            <div class="made-stat">
+                <div class="made-stat-val">GHS</div>
+                <div class="made-stat-lbl">Globally Harmonised<br>System Compliant</div>
+            </div>
+            <div class="made-stat">
+                <div class="made-stat-val">AS</div>
+                <div class="made-stat-lbl">AS/NZS & Safe Work<br>Australia Certified</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RANGE TODAY -->
+<section class="range-today">
+    <div class="range-inner">
+        <div class="range-header">
+            <p class="range-kicker">Available Today</p>
+            <h2 class="range-h2">One Formula.<br><em>Every Format.</em></h2>
+        </div>
+        <div class="range-grid">
+            <div class="range-card">
+                <div class="range-card-img">
+                    <img src="product_images/transparent/PEN400.png" alt="Penetrene 400g Aerosol">
+                </div>
+                <div class="range-card-divider"></div>
+                <p class="range-card-size">400g Aerosol</p>
+                <p class="range-card-desc">Precision spray for automotive, electrical, and overhead applications. The trade workshop staple.</p>
+            </div>
+            <div class="range-card">
+                <div class="range-card-img">
+                    <img src="product_images/transparent/Penetrene_250.png" alt="Penetrene 250mL">
+                </div>
+                <div class="range-card-divider"></div>
+                <p class="range-card-size">250mL & 500mL</p>
+                <p class="range-card-desc">Classic squeeze bottle format. Direct application to fasteners, hinges, and seized components.</p>
+            </div>
+            <div class="range-card">
+                <div class="range-card-img">
+                    <img src="product_images/transparent/Pen5.png" alt="Penetrene 5L">
+                </div>
+                <div class="range-card-divider"></div>
+                <p class="range-card-size">1L – 5L</p>
+                <p class="range-card-desc">Workshop and farm supply format. Economical for high-frequency use across multiple sites and equipment.</p>
+            </div>
+            <div class="range-card">
+                <div class="range-card-img">
+                    <img src="product_images/transparent/Pen200.png" alt="Penetrene 200L Drum">
+                </div>
+                <div class="range-card-divider"></div>
+                <p class="range-card-size">20L – 200L</p>
+                <p class="range-card-desc">Industrial bulk supply for mine sites, large agricultural operations, and fleet maintenance programs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- LEGACY STATS -->
+<section class="legacy">
+    <div class="legacy-inner">
+        <div class="legacy-stat">
+            <div class="legacy-val">1924</div>
+            <div class="legacy-lbl">Year Founded<br>in Australia</div>
+        </div>
+        <div class="legacy-stat">
+            <div class="legacy-val">100+</div>
+            <div class="legacy-lbl">Years of Continuous<br>Production</div>
+        </div>
+        <div class="legacy-stat">
+            <div class="legacy-val">35kV</div>
+            <div class="legacy-lbl">Dielectric<br>Strength</div>
+        </div>
+        <div class="legacy-stat">
+            <div class="legacy-val">200+</div>
+            <div class="legacy-lbl">Active Stockist<br>Locations</div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="logo.png" alt="Penetrene" class="footer-logo">
+                <p class="footer-tagline">The Red Oil That Creeps</p>
+                <p>Precision engineered since 1924 for heavy industry, maritime, and maintenance applications across Australia.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Email">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                    <a href="#" aria-label="Share">
+                        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Product</p>
+                <ul>
+                    <li><a href="index.html#products">Product Range</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="sds.html">Safety Data Sheets</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Company</p>
+                <ul>
+                    <li><a href="heritage.html">Our Heritage</a></li>
+                    <li><a href="wheretobuy.html">Where To Buy</a></li>
+                    <li><a href="distributor.html">Become a Distributor</a></li>
+                    <li><a href="quote.html">Get A Quote</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">&copy; 2026 Penetrene Industrial. All rights reserved.</span>
+            <div class="footer-mfr-logos">
+                <img src="brand_assets/AusrtralianMADE.png" alt="Australian Made and Owned" class="footer-aus-logo">
+                <img src="brand_assets/advancelogowhite.png" alt="Advance Chemicals">
+                <img src="brand_assets/QuickSmartLogoWhite.png" alt="Quick Smart Products">
+            </div>
+            <div class="footer-bot-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

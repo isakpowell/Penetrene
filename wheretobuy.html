@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where To Buy — Penetrene Industrial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+        --y: #FFD000;
+        --r: #CC0000;
+        --black: #000;
+        --dark: #111;
+        --w: #fff;
+        --bg: #EAEAEA;
+        --display: 'Open Sans', sans-serif;
+        --body: 'Open Sans', sans-serif;
+    }
+
+    body {
+        font-family: var(--body);
+        background: var(--bg);
+        color: var(--black);
+        overflow-x: hidden;
+    }
+
+    /* ── NAV ─────────────────────────────────── */
+    nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--black);
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    nav.scrolled { height: 60px; }
+    .nav-logo { height: 44px; display: block; transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
+    nav.scrolled .nav-logo { height: 28px; }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.85);
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--w); }
+
+    .nav-cta {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--black) !important;
+        background: var(--y);
+        padding: 8px 18px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover { opacity: 0.88; }
+
+    /* ── NAV DROPDOWN ─────────────────────────────── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+    .nav-dropdown > a::after { content: ''; display: block; width: 6px; height: 6px; border-right: 1.5px solid rgba(255,255,255,0.6); border-bottom: 1.5px solid rgba(255,255,255,0.6); transform: rotate(45deg) translateY(-2px); transition: transform 0.2s; }
+    .nav-dropdown:hover > a::after { transform: rotate(225deg) translateY(-2px); }
+    .nav-dropdown-panel { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-4px); background: #111; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; min-width: 200px; padding: 12px 8px 8px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.18s, transform 0.18s; box-shadow: 0 16px 48px rgba(0,0,0,0.6); }
+    .nav-dropdown:hover .nav-dropdown-panel { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(-50%) translateY(0); }
+    .nav-dropdown-panel a { display: block; font-family: var(--display); font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7) !important; text-decoration: none; padding: 10px 14px; border-radius: 5px; transition: background 0.15s, color 0.15s; }
+    .nav-dropdown-panel a:hover { background: rgba(255,255,255,0.06); color: #fff !important; }
+    .drop-icon { display: inline-block; width: 6px; height: 6px; background: #FFD000; border-radius: 50%; margin-right: 8px; vertical-align: middle; position: relative; top: -1px; }
+
+    .nav-distributor {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.85) !important;
+        background: transparent;
+        padding: 7px 16px;
+        border-radius: 4px;
+        border: 1.5px solid rgba(255,255,255,0.25);
+        text-decoration: none;
+        transition: border-color 0.2s, color 0.2s;
+    }
+
+    .nav-distributor:hover {
+        border-color: rgba(255,255,255,0.6);
+        color: var(--w) !important;
+    }
+
+    /* ── PAGE HEADER ──────────────────────────── */
+    .page-header {
+        padding: 64px 40px 40px;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .page-heading {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 64px;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+        color: var(--black);
+        line-height: 1;
+        margin-bottom: 12px;
+    }
+
+    .page-rule {
+        width: 52px;
+        height: 4px;
+        background: var(--y);
+    }
+
+    /* ── MAIN CONTENT ─────────────────────────── */
+    .content {
+        padding: 0 0 96px;
+    }
+
+    .content-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: start;
+    }
+
+    /* ── SECTION COLUMN ───────────────────────── */
+    .stock-col {}
+
+    .col-heading {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: -0.02em;
+        color: var(--black);
+        margin-bottom: 16px;
+    }
+
+    /* ── STOCKIST ROWS ────────────────────────── */
+    .stock-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .stock-row {
+        background: var(--w);
+        border-radius: 14px;
+        padding: 20px 24px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-decoration: none;
+        transition: transform 0.2s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s;
+    }
+
+    .stock-row:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+    }
+
+    .stock-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: var(--bg);
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stock-icon svg {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: rgba(0,0,0,0.4);
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .stock-icon img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+        filter: grayscale(1);
+        opacity: 0.6;
+    }
+
+    .stock-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .stock-name {
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 14px;
+        color: var(--black);
+        margin-bottom: 2px;
+    }
+
+    .stock-desc {
+        font-size: 12px;
+        color: rgba(0,0,0,0.45);
+        line-height: 1.5;
+    }
+
+    .stock-badge {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 9px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(0,0,0,0.4);
+        background: var(--bg);
+        border-radius: 4px;
+        padding: 4px 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .stock-badge.online { color: #166534; background: #dcfce7; }
+    .stock-badge.regional { color: #92400e; background: #fef3c7; }
+
+    /* ── CTA STRIP ────────────────────────────── */
+    .cta-strip-wrap {
+        padding: 0 40px 96px;
+        max-width: 1280px;
+        margin: 40px auto 0;
+    }
+
+    .cta-strip {
+        background: var(--black);
+        border-radius: 20px;
+        padding: 48px 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    .cta-text {}
+
+    .cta-eyebrow {
+        font-family: var(--display);
+        font-weight: 600;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--y);
+        margin-bottom: 10px;
+    }
+
+    .cta-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 28px;
+        color: #EEEEF0;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+    }
+
+    .btn-cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--y);
+        color: var(--black);
+        font-family: var(--display);
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: opacity 0.2s;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .btn-cta:hover { opacity: 0.88; }
+
+    .btn-cta svg {
+        width: 13px;
+        height: 13px;
+        fill: none;
+        stroke: var(--black);
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.07); padding: 56px 40px 0; }
+    .footer-inner { max-width: 1280px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .footer-logo { height: 34px; display: block; margin-bottom: 14px; }
+    .footer-tagline { font-family: var(--display); font-weight: 700; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--y); margin-bottom: 10px; }
+    .footer-brand p { font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 270px; margin-bottom: 20px; }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social a { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: border-color 0.2s; }
+    .footer-social a:hover { border-color: rgba(255,255,255,0.35); }
+    .footer-social svg { width: 13px; height: 13px; fill: none; stroke: rgba(255,255,255,0.45); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .footer-col-title { font-family: var(--display); font-weight: 700; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 18px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--w); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; gap: 24px; flex-wrap: wrap; }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.18); }
+    .footer-mfr-logos { display: flex; align-items: center; gap: 28px; }
+    .footer-mfr-logos img { height: 20px; opacity: 0.45; display: block; transition: opacity 0.2s; }
+    .footer-mfr-logos img:hover { opacity: 0.75; }
+    .footer-aus-logo { height: 48px !important; opacity: 0.9 !important; }
+    .footer-aus-logo:hover { opacity: 1 !important; }
+    .footer-bot-links { display: flex; gap: 20px; }
+    .footer-bot-links a { font-size: 11px; color: rgba(255,255,255,0.18); text-decoration: none; transition: color 0.2s; }
+    .footer-bot-links a:hover { color: rgba(255,255,255,0.45); }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html"><img src="logo.png" alt="Penetrene" class="nav-logo"></a>
+    <ul class="nav-links">
+        <li><a href="index.html#products">Product Range</a></li>
+        <li><a href="heritage.html">Our Heritage</a></li>
+        <li class="nav-dropdown">
+            <a href="#">Resources</a>
+            <div class="nav-dropdown-panel">
+                <a href="applications.html"><span class="drop-icon"></span>Applications</a>
+                <a href="sds.html"><span class="drop-icon"></span>Safety Data Sheets</a>
+                <a href="#"><span class="drop-icon"></span>Technical Data</a>
+            </div>
+        </li>
+        <li><a href="wheretobuy.html" style="color:#FFD000;">Where To Buy</a></li>
+        <li><a href="distributor.html" class="nav-distributor">Become a Distributor</a></li>
+        <li><a href="quote.html" class="nav-cta">Get A Quote</a></li>
+    </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+    <h1 class="page-heading">Where To Buy</h1>
+    <div class="page-rule"></div>
+</div>
+
+<!-- STOCKISTS -->
+<section class="content">
+    <div class="content-inner">
+
+        <!-- ONLINE & NATIONWIDE -->
+        <div class="stock-col">
+            <p class="col-heading">Online &amp; Nationwide</p>
+            <div class="stock-list">
+
+                <a href="#" class="stock-row">
+                    <div class="stock-icon">
+                        <img src="brand_assets/blackwoodslogo.png" alt="Blackwoods">
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Blackwoods</p>
+                        <p class="stock-desc">Full range — 250mL, 500mL, 5L &amp; 20L drums. Nationwide delivery.</p>
+                    </div>
+                    <span class="stock-badge online">Online</span>
+                </a>
+
+                <a href="#" class="stock-row">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.97-1.67L23 6H6"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Motion Australia</p>
+                        <p class="stock-desc">400g aerosol (Part #PEN400QUI) and industrial quantities. Real-time stock availability.</p>
+                    </div>
+                    <span class="stock-badge online">Online</span>
+                </a>
+
+                <a href="#" class="stock-row">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.97-1.67L23 6H6"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Mitre 10</p>
+                        <p class="stock-desc">Available online and Click &amp; Collect at participating stores nationwide.</p>
+                    </div>
+                    <span class="stock-badge online">Online</span>
+                </a>
+
+                <a href="#" class="stock-row">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.97-1.67L23 6H6"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Industrial Shed</p>
+                        <p class="stock-desc">Trade-grade specialist stocking the Advance Chemicals Penetrene line. Australia-wide delivery.</p>
+                    </div>
+                    <span class="stock-badge online">Online</span>
+                </a>
+
+                <a href="#" class="stock-row">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.97-1.67L23 6H6"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Baker &amp; Farrow</p>
+                        <p class="stock-desc">500mL squeeze bottles — preferred for precision applications without aerosol overspray.</p>
+                    </div>
+                    <span class="stock-badge online">Online</span>
+                </a>
+
+                <a href="#" class="stock-row">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 001.97-1.67L23 6H6"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Multifors</p>
+                        <p class="stock-desc">Online stockist for the Penetrene range.</p>
+                    </div>
+                    <span class="stock-badge online">Online</span>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- IN-STORE & REGIONAL -->
+        <div class="stock-col">
+            <p class="col-heading">In-Store &amp; Regional</p>
+            <div class="stock-list">
+
+                <div class="stock-row" style="cursor:default;">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Repco &amp; Burson Auto Parts</p>
+                        <p class="stock-desc">Primary automotive distributors. In-store or order within 24hrs from warehouse.</p>
+                    </div>
+                    <span class="stock-badge">National</span>
+                </div>
+
+                <div class="stock-row" style="cursor:default;">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Total Tools</p>
+                        <p class="stock-desc">Stocks the Quick Smart / Advance Chemicals range including Penetrene.</p>
+                    </div>
+                    <span class="stock-badge">National</span>
+                </div>
+
+                <div class="stock-row" style="cursor:default;">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">HBT Member Stores</p>
+                        <p class="stock-desc">Includes Thrifty-Link and independent Mitre 10 hardware stores across Australia.</p>
+                    </div>
+                    <span class="stock-badge">National</span>
+                </div>
+
+                <div class="stock-row" style="cursor:default;">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Refast Pty Ltd</p>
+                        <p class="stock-desc">400g aerosol and bulk liquid sizes. Mulgrave, VIC.</p>
+                    </div>
+                    <span class="stock-badge regional">VIC</span>
+                </div>
+
+                <div class="stock-row" style="cursor:default;">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">M&amp;G Industrial Supplies</p>
+                        <p class="stock-desc">Aerosol and liquid variants. Canberra region, ACT.</p>
+                    </div>
+                    <span class="stock-badge regional">ACT</span>
+                </div>
+
+                <div class="stock-row" style="cursor:default;">
+                    <div class="stock-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div class="stock-info">
+                        <p class="stock-name">Crisp n' Clean</p>
+                        <p class="stock-desc">Industrial cleaning specialist stocking 1L and 5L options. TAS.</p>
+                    </div>
+                    <span class="stock-badge regional">TAS</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip-wrap">
+    <div class="cta-strip">
+        <div class="cta-text">
+            <p class="cta-eyebrow">Can't find a stockist near you?</p>
+            <p class="cta-title">Request a quote direct<br>from our sales team.</p>
+        </div>
+        <a href="quote.html" class="btn-cta">
+            Get A Quote
+            <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="logo.png" alt="Penetrene" class="footer-logo">
+                <p class="footer-tagline">The Red Oil That Creeps</p>
+                <p>Precision engineered since 1924 for heavy industry, maritime, and maintenance applications across Australia.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Email">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                    <a href="#" aria-label="Share">
+                        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Product</p>
+                <ul>
+                    <li><a href="index.html#products">Product Range</a></li>
+                    <li><a href="applications.html">Applications</a></li>
+                    <li><a href="sds.html">Safety Data Sheets</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p class="footer-col-title">Company</p>
+                <ul>
+                    <li><a href="heritage.html">Our Heritage</a></li>
+                    <li><a href="wheretobuy.html">Where To Buy</a></li>
+                    <li><a href="distributor.html">Become a Distributor</a></li>
+                    <li><a href="quote.html">Get A Quote</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span class="footer-copy">&copy; 2026 Penetrene Industrial. All rights reserved.</span>
+            <div class="footer-mfr-logos">
+                <img src="brand_assets/AusrtralianMADE.png" alt="Australian Made and Owned" class="footer-aus-logo">
+                <img src="brand_assets/advancelogowhite.png" alt="Advance Chemicals">
+                <img src="brand_assets/QuickSmartLogoWhite.png" alt="Quick Smart Products">
+            </div>
+            <div class="footer-bot-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+</script>
+</body>
+</html>
