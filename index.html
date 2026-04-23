@@ -351,6 +351,70 @@
         color: rgba(255,255,255,0.45);
     }
 
+    /* ── AUS MADE BANNER ──────────────────────────── */
+    .aus-banner {
+        background: #00875A;
+        padding: 20px 40px;
+        overflow: hidden;
+    }
+
+    .aus-banner-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+    }
+
+    .aus-banner-line {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(255,255,255,0.3));
+    }
+
+    .aus-banner-line.right {
+        background: linear-gradient(to left, transparent, rgba(255,255,255,0.3));
+    }
+
+    .aus-banner-content {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .aus-banner-logo {
+        height: 64px;
+        display: block;
+        flex-shrink: 0;
+    }
+
+    .aus-banner-text {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .aus-banner-eyebrow {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 9px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.6);
+    }
+
+    .aus-banner-label {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        font-style: italic;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 1;
+    }
+
     /* ── TRUSTED BY ───────────────────────────────── */
     .trusted {
         background: var(--w);
@@ -930,6 +994,20 @@
             <p class="feat-title">Displaces Moisture</p>
             <p class="feat-desc">Chemically displaces standing water from metal surfaces and electrical contacts instantly.</p>
         </div>
+    </div>
+</section>
+
+<!-- AUS MADE BANNER -->
+<section class="aus-banner">
+    <div class="aus-banner-inner">
+        <div class="aus-banner-line"></div>
+        <div class="aus-banner-content">
+            <img src="brand_assets/AustralianMadeOutline@4x.png" alt="Australian Made and Owned" class="aus-banner-logo">
+            <div class="aus-banner-text">
+                <span class="aus-banner-label">Proudly Australian Made &amp; Owned</span>
+            </div>
+        </div>
+        <div class="aus-banner-line right"></div>
     </div>
 </section>
 

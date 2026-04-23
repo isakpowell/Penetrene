@@ -16,7 +16,7 @@ Refast Pty Ltd (VIC): Located in Mulgrave, they stock the 400g aerosol and vario
 
 M&G Industrial Supplies (ACT): A reliable source for the Canberra region, providing both aerosol and liquid variants.
 
-Crisp n' Clean (TAS): An industrial cleaning solution specialist that stocks 1L and 5L options.
+Crisp n' Clean (TAS): An industrial cleaning solution specialist that stocks 1L and 5L options. link: https://www.crispnclean.com.au/product/quicksmart-penetrene-5l/
 
 Total Tools: Often stocks the Quick Smart / Advance Chemicals range, which includes Penetrene.
 
@@ -28,10 +28,10 @@ Online:
 
 Multifors
 
-Blackwoods Online: This is one of the most reliable online sources for the full range. They list the 400g aerosol, 250ml/500ml squeeze bottles, and the larger 5L/20L drums.
+Blackwoods Online: This is one of the most reliable online sources for the full range. They list the 400g aerosol, 250ml/500ml squeeze bottles, and the larger 5L/20L drums. link:https://www.blackwoods.com.au/pentrene/b/558997
 
-Motion Australia: A specialized industrial site that offers the 400g aerosol (Part #PEN400QUI) with real-time stock availability and delivery estimates for business or personal use.
+Motion Australia: A specialized industrial site that offers the 400g aerosol (Part #PEN400QUI) with real-time stock availability and delivery estimates for business or personal use. link:https://www.motion.com.au/brands/penetrene?srsltid=AfmBOooouu2UJb0Xl5uGbIjqA6yNW8LODelpPnvdjBzwInrxGRYWMHZ2
 
-Baker & Farrow: Their online store carries the 500ml liquid squeeze bottles, which are often preferred for precision work where you don't want the overspray of an aerosol.
+Baker & Farrow: Their online store carries the 500ml liquid squeeze bottles, which are often preferred for precision work where you don't want the overspray of an aerosol. link: https://www.bakfar.com.au/products/search?search=penetrene
 
-Industrial Shed: A great option for direct-to-door delivery. They specialize in trade brands and stock the Advance Chemicals/Quick Smart line.
+Industrial Shed: A great option for direct-to-door delivery. They specialize in trade brands and stock the Advance Chemicals/Quick Smart line. link: https://www.industrialshed.net.au/search?q=penetrene&options%5Bprefix%5D=last&type=product
