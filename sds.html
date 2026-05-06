@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="brand_assets/penfav2@4x.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safety Data Sheets — Penetrene Industrial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,29 +48,36 @@
     .nav-logo { height: 44px; display: block; transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
     nav.scrolled .nav-logo { height: 28px; }
 
-    /* ── PAGE HEADER ──────────────────────────── */
-    .page-header {
-        padding: 64px 40px 40px;
+    /* ── HERO ─────────────────────────── */
+    .hero {
+        background: #1a1a1a;
+        padding: 72px 40px 64px;
+    }
+
+    .hero-inner {
         max-width: 1280px;
         margin: 0 auto;
     }
 
-    .page-heading {
+    .hero h1 {
         font-family: 'Open Sans', sans-serif;
         font-weight: 800;
         font-style: italic;
-        font-size: 64px;
+        font-size: 80px;
         letter-spacing: -0.03em;
         text-transform: uppercase;
-        color: var(--black);
+        color: #EEEEF0;
         line-height: 1;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
     }
 
-    .page-rule {
-        width: 52px;
-        height: 4px;
-        background: var(--y);
+    .hero h1 span { color: var(--y); }
+
+    .hero-desc {
+        font-size: 14px;
+        line-height: 1.7;
+        color: rgba(255,255,255,0.45);
+        max-width: 480px;
     }
 
     .nav-links {
@@ -303,7 +311,7 @@
     /* ── SDS SECTION ─────────────────────────── */
     .sds-section {
         background: #EAEAEA;
-        padding: 0 40px 80px;
+        padding: 60px 40px 80px;
         position: relative;
         overflow: hidden;
     }
@@ -554,25 +562,21 @@
     <ul class="nav-links">
         <li><a href="index.html#products">Product Range</a></li>
         <li><a href="heritage.html">Our Heritage</a></li>
-        <li class="nav-dropdown">
-            <a href="#" style="color:#FFD000;">Resources</a>
-            <div class="nav-dropdown-panel">
-                <a href="applications.html"><span class="drop-icon"></span>Applications</a>
-                <a href="sds.html" style="color:#FFD000 !important;"><span class="drop-icon"></span>Safety Data Sheets</a>
-                <a href="#"><span class="drop-icon"></span>Technical Data</a>
-            </div>
-        </li>
+        <li><a href="sds.html">SDS</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="wheretobuy.html">Where To Buy</a></li>
         <li><a href="distributor.html" class="nav-distributor">Become a Distributor</a></li>
         <li><a href="quote.html" class="nav-cta">Get A Quote</a></li>
     </ul>
 </nav>
 
-<!-- PAGE HEADER -->
-<div class="page-header">
-    <h1 class="page-heading">Safety Data Sheets</h1>
-    <div class="page-rule"></div>
-</div>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-inner">
+        <h1>Safety Data<br><span>Sheets</span></h1>
+        <p class="hero-desc">Download safety data sheets for all Penetrene products. All documents follow the GHS 16-section format as required under Australian Work Health and Safety regulations.</p>
+    </div>
+</section>
 
 <!-- SDS GRID -->
 <section class="sds-section">

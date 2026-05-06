@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="brand_assets/penfav2@4x.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get A Quote — Penetrene Industrial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -478,14 +479,8 @@
     <ul class="nav-links">
         <li><a href="index.html#products">Product Range</a></li>
         <li><a href="heritage.html">Our Heritage</a></li>
-        <li class="nav-dropdown">
-            <a href="#">Resources</a>
-            <div class="nav-dropdown-panel">
-                <a href="applications.html"><span class="drop-icon"></span>Applications</a>
-                <a href="sds.html"><span class="drop-icon"></span>Safety Data Sheets</a>
-                <a href="#"><span class="drop-icon"></span>Technical Data</a>
-            </div>
-        </li>
+        <li><a href="sds.html">SDS</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="wheretobuy.html">Where To Buy</a></li>
         <li><a href="distributor.html" class="nav-distributor">Become a Distributor</a></li>
         <li><a href="quote.html" class="nav-cta" style="opacity:1;">Get A Quote</a></li>
@@ -505,6 +500,10 @@
         <!-- FORM CARD -->
         <div class="form-card">
             <form id="quoteForm">
+                <input type="hidden" name="access_key" value="f7a88057-da79-403a-8673-679e5b945a69">
+                <input type="hidden" name="subject" value="New Quote Request — Penetrene">
+                <input type="hidden" name="from_name" value="Penetrene Website">
+                <input type="checkbox" name="botcheck" style="display:none">
                 <div class="form-grid">
 
                     <div class="form-group">
@@ -692,13 +691,29 @@
 <script>
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 10);
+        const y = window.scrollY;
+        if (y > 30) nav.classList.add('scrolled');
+        else if (y < 10) nav.classList.remove('scrolled');
     }, { passive: true });
 
-    document.getElementById('quoteForm').addEventListener('submit', function(e) {
+    document.getElementById('quoteForm').addEventListener('submit', async function(e) {
         e.preventDefault();
-        this.style.display = 'none';
-        document.getElementById('formSuccess').style.display = 'flex';
+        const btn = this.querySelector('.btn-submit');
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+
+        const data = new FormData(this);
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+        const json = await res.json();
+
+        if (json.success) {
+            this.style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'flex';
+        } else {
+            btn.disabled = false;
+            btn.textContent = 'Submit Request';
+            alert('Something went wrong. Please try again or email us directly.');
+        }
     });
 </script>
 </body>

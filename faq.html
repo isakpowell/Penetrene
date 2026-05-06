@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="brand_assets/penfav2@4x.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ — Penetrene Industrial</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,48 +29,23 @@
     }
 
     /* ── NAV ─────────────────────────── */
-    nav {
-        background: var(--black);
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 40px;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-    nav img { height: 28px; display: block; }
-
-    .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        list-style: none;
-    }
-
-    .nav-links a {
-        font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255,255,255,0.85);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
+    nav { position: sticky; top: 0; z-index: 100; background: var(--black); display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; transition: padding 0.3s cubic-bezier(0.22,1,0.36,1); }
+    nav.scrolled { padding: 10px 40px; }
+    .nav-logo { height: 44px; display: block; transform-origin: left center; transition: transform 0.3s cubic-bezier(0.22,1,0.36,1); }
+    nav.scrolled .nav-logo { transform: scale(0.636); }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--w); }
-
-    .nav-cta {
-        color: var(--black) !important;
-        background: var(--y);
-        padding: 8px 18px;
-        border-radius: 4px;
-        transition: opacity 0.2s;
-    }
-
+    .nav-distributor { font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85) !important; background: transparent; padding: 7px 16px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.25); text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .nav-distributor:hover { border-color: rgba(255,255,255,0.6); color: var(--w) !important; }
+    .nav-cta { font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black) !important; background: var(--y); padding: 8px 18px; border-radius: 4px; text-decoration: none; transition: opacity 0.2s; }
     .nav-cta:hover { opacity: 0.88; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--w); transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), opacity 0.2s; }
+    nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+    nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 768px) { .nav-hamburger { display: flex; } .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 100%; left: 0; right: 0; background: var(--black); padding: 12px 24px 20px; border-top: 1px solid rgba(255,255,255,0.08); } nav.nav-open .nav-links { display: flex; } .nav-links a { padding: 10px 0; width: 100%; } .nav-distributor, .nav-cta { margin-top: 4px; } }
 
     /* ── HERO ─────────────────────────── */
     .hero {
@@ -419,13 +395,17 @@
 
 <!-- NAV -->
 <nav>
-    <a href="index.html"><img src="logo.png" alt="Penetrene"></a>
+    <a href="index.html"><img src="logo.png" alt="Penetrene" class="nav-logo"></a>
+    <button class="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
         <li><a href="index.html#products">Product Range</a></li>
         <li><a href="heritage.html">Our Heritage</a></li>
-        <li><a href="applications.html">Applications</a></li>
+        <li><a href="sds.html">SDS</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="wheretobuy.html">Where To Buy</a></li>
-        <li><a href="distributor.html">Become a Distributor</a></li>
+        <li><a href="distributor.html" class="nav-distributor">Become a Distributor</a></li>
         <li><a href="quote.html" class="nav-cta">Get A Quote</a></li>
     </ul>
 </nav>
@@ -433,7 +413,7 @@
 <!-- HERO -->
 <section class="hero">
     <div class="hero-inner">
-        <p class="hero-eyebrow">Penetrene Industrial — Support</p>
+
         <h1>Frequently<br><span>Asked</span></h1>
         <p class="hero-desc">Find answers to common questions about Penetrene products, applications, ordering, and safety. Can't find what you're looking for? Contact our technical team directly.</p>
     </div>
@@ -685,6 +665,11 @@
 </footer>
 
 <script>
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 10); }, { passive: true });
+    document.querySelector('.nav-hamburger').addEventListener('click', () => { nav.classList.toggle('nav-open'); });
+    document.querySelectorAll('.nav-links a').forEach(a => { a.addEventListener('click', () => nav.classList.remove('nav-open')); });
+
     // Accordion
     document.querySelectorAll('.faq-question').forEach(btn => {
         btn.addEventListener('click', () => {

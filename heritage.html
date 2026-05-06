@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="brand_assets/penfav2@4x.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Heritage — Penetrene Industrial Since 1924</title>
     <meta name="description" content="Penetrene has been Australia's trusted industrial lubricant and rust penetrant since 1924. 100 years of The Red Oil That Creeps.">
@@ -33,82 +34,23 @@
         overflow-x: hidden;
     }
 
-    /* ── NAV ─────────────────────────────────── */
-    nav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background: var(--black);
-        height: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 40px;
-    }
-
-    .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        list-style: none;
-    }
-
-    .nav-links a {
-        font-family: var(--display);
-        font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255,255,255,0.85);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
+    nav { position: sticky; top: 0; z-index: 100; background: var(--black); display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; transition: padding 0.3s cubic-bezier(0.22,1,0.36,1); }
+    nav.scrolled { padding: 10px 40px; }
+    .nav-logo { height: 44px; display: block; transform-origin: left center; transition: transform 0.3s cubic-bezier(0.22,1,0.36,1); }
+    nav.scrolled .nav-logo { transform: scale(0.636); }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-family: var(--display); font-weight: 600; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s; }
     .nav-links a:hover { color: var(--w); }
-
-    .nav-distributor {
-        font-family: var(--display);
-        font-weight: 700;
-        font-size: 13px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255,255,255,0.85) !important;
-        background: transparent;
-        padding: 7px 16px;
-        border-radius: 4px;
-        border: 1.5px solid rgba(255,255,255,0.25);
-        text-decoration: none;
-        transition: border-color 0.2s, color 0.2s;
-    }
-
+    .nav-distributor { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.85) !important; background: transparent; padding: 7px 16px; border-radius: 4px; border: 1.5px solid rgba(255,255,255,0.25); text-decoration: none; transition: border-color 0.2s, color 0.2s; }
     .nav-distributor:hover { border-color: rgba(255,255,255,0.6); color: var(--w) !important; }
-
-    .nav-cta {
-        font-family: var(--display);
-        font-weight: 700;
-        font-size: 13px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--black) !important;
-        background: var(--y);
-        padding: 8px 18px;
-        border-radius: 4px;
-        text-decoration: none;
-        transition: opacity 0.2s;
-    }
-
+    .nav-cta { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--black) !important; background: var(--y); padding: 8px 18px; border-radius: 4px; text-decoration: none; transition: opacity 0.2s; }
     .nav-cta:hover { opacity: 0.88; }
-
-    /* ── NAV DROPDOWN ─────────────────────────────── */
-    .nav-dropdown { position: relative; }
-    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; cursor: pointer; }
-    .nav-dropdown > a::after { content: ''; display: block; width: 6px; height: 6px; border-right: 1.5px solid rgba(255,255,255,0.6); border-bottom: 1.5px solid rgba(255,255,255,0.6); transform: rotate(45deg) translateY(-2px); transition: transform 0.2s; }
-    .nav-dropdown:hover > a::after { transform: rotate(225deg) translateY(-2px); }
-    .nav-dropdown-panel { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-4px); background: #111; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; min-width: 200px; padding: 12px 8px 8px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.18s, transform 0.18s; box-shadow: 0 16px 48px rgba(0,0,0,0.6); }
-    .nav-dropdown:hover .nav-dropdown-panel { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(-50%) translateY(0); }
-    .nav-dropdown-panel a { display: block; font-family: var(--display); font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7) !important; text-decoration: none; padding: 10px 14px; border-radius: 5px; transition: background 0.15s, color 0.15s; }
-    .nav-dropdown-panel a:hover { background: rgba(255,255,255,0.06); color: #fff !important; }
-    .drop-icon { display: inline-block; width: 6px; height: 6px; background: #FFD000; border-radius: 50%; margin-right: 8px; vertical-align: middle; position: relative; top: -1px; }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 22px; height: 2px; background: var(--w); transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), opacity 0.2s; }
+    nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; }
+    nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    @media (max-width: 768px) { .nav-hamburger { display: flex; } .nav-links { display: none; flex-direction: column; align-items: flex-start; gap: 0; position: absolute; top: 100%; left: 0; right: 0; background: var(--black); padding: 12px 24px 20px; border-top: 1px solid rgba(255,255,255,0.08); } nav.nav-open .nav-links { display: flex; } .nav-links a { padding: 10px 0; width: 100%; } .nav-distributor, .nav-cta { margin-top: 4px; } }
 
     /* ── HERO ────────────────────────────────── */
     .hero {
@@ -1190,18 +1132,15 @@
 
 <!-- NAV -->
 <nav>
-    <a href="index.html"><img src="logo.png" alt="Penetrene" style="height:28px;display:block;"></a>
+    <a href="index.html"><img src="logo.png" alt="Penetrene" class="nav-logo"></a>
+    <button class="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
         <li><a href="index.html#products">Product Range</a></li>
-        <li><a href="heritage.html" style="color:#FFD000;">Our Heritage</a></li>
-        <li class="nav-dropdown">
-            <a href="#">Resources</a>
-            <div class="nav-dropdown-panel">
-                <a href="applications.html"><span class="drop-icon"></span>Applications</a>
-                <a href="sds.html"><span class="drop-icon"></span>Safety Data Sheets</a>
-                <a href="#"><span class="drop-icon"></span>Technical Data</a>
-            </div>
-        </li>
+        <li><a href="heritage.html">Our Heritage</a></li>
+        <li><a href="sds.html">SDS</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="wheretobuy.html">Where To Buy</a></li>
         <li><a href="distributor.html" class="nav-distributor">Become a Distributor</a></li>
         <li><a href="quote.html" class="nav-cta">Get A Quote</a></li>
@@ -1590,5 +1529,11 @@
     </div>
 </footer>
 
+<script>
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 10); }, { passive: true });
+document.querySelector('.nav-hamburger').addEventListener('click', () => { nav.classList.toggle('nav-open'); });
+document.querySelectorAll('.nav-links a').forEach(a => { a.addEventListener('click', () => nav.classList.remove('nav-open')); });
+</script>
 </body>
 </html>

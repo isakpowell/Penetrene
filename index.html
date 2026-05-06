@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="brand_assets/penfav2@4x.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Penetrene Industrial — The Red Oil That Creeps</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,26 +37,26 @@
         top: 0;
         z-index: 100;
         background: var(--black);
-        height: 80px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 40px;
-        transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        padding: 20px 40px;
+        transition: padding 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     nav.scrolled {
-        height: 60px;
+        padding: 10px 40px;
     }
 
     .nav-logo {
         height: 44px;
         display: block;
-        transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        transform-origin: left center;
+        transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     nav.scrolled .nav-logo {
-        height: 28px;
+        transform: scale(0.636);
     }
 
     .nav-links {
@@ -515,12 +516,11 @@
     }
 
     .prod-heading {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 800;
-        font-style: italic;
+        font-family: 'Space Grotesk', sans-serif;
+        font-weight: 700;
+        font-style: normal;
         font-size: 64px;
         letter-spacing: -0.03em;
-        text-transform: uppercase;
         color: var(--black);
         line-height: 1;
         margin-bottom: 8px;
@@ -779,8 +779,6 @@
         transform: translate(-50%, -50%);
         font-family: var(--display);
         font-weight: 800;
-        font-size: 180px;
-        letter-spacing: 0.04em;
         color: rgba(0,0,0,0.06);
         text-transform: uppercase;
         pointer-events: none;
@@ -799,8 +797,9 @@
     .cta-inner h2 {
         font-family: 'Space Grotesk', sans-serif;
         font-weight: 700;
-        font-size: clamp(48px, 7vw, 80px);
-        letter-spacing: -0.01em;
+        font-style: normal;
+        font-size: 64px;
+        letter-spacing: -0.03em;
         color: var(--black);
         line-height: 1;
         margin-bottom: 44px;
@@ -902,8 +901,34 @@
 
     .btn-cta-outline:hover { background: var(--black); color: var(--w); }
 
+    /* ── HAMBURGER ────────────────────────────── */
+    .nav-hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px 4px;
+        z-index: 10;
+    }
+
+    .nav-hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+        transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), opacity 0.2s;
+    }
+
+    nav.nav-open .nav-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    nav.nav-open .nav-hamburger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    nav.nav-open .nav-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* ── FOOTER ──────────────────────────────── */
-    footer { background: #000000; border-top: 1px solid rgba(255,255,255,0.07); padding: 56px 40px 0; }
+    footer { background: #000000; border-top: 1px solid rgb(0, 0, 0); padding: 56px 40px 0; }
     .footer-inner { max-width: 1280px; margin: 0 auto; }
     .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
     .footer-logo { height: 34px; display: block; margin-bottom: 14px; }
@@ -928,6 +953,87 @@
     .footer-bot-links { display: flex; gap: 20px; }
     .footer-bot-links a { font-size: 11px; color: rgba(255,255,255,0.18); text-decoration: none; transition: color 0.2s; }
     .footer-bot-links a:hover { color: rgba(255,255,255,0.45); }
+
+    /* ── RESPONSIVE ───────────────────────────────── */
+    @media (max-width: 768px) {
+        /* Nav */
+        nav { padding: 0 20px; position: relative; flex-wrap: wrap; height: auto; min-height: 64px; align-items: center; }
+        nav.scrolled { padding: 8px 20px; }
+        .nav-hamburger { display: flex; }
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0; right: 0;
+            background: #111;
+            padding: 12px 20px 20px;
+            gap: 2px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            z-index: 99;
+        }
+        nav.nav-open .nav-links { display: flex; }
+        .nav-links li { width: 100%; }
+        .nav-links a { font-size: 13px; padding: 10px 0; display: block; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .nav-distributor { display: block; text-align: center; margin-top: 8px; padding: 10px !important; width: 100%; }
+        .nav-cta { display: block; text-align: center; margin-top: 6px; padding: 11px !important; width: 100%; }
+
+        /* Hero */
+        .hero { min-height: auto; }
+        .hero-inner { grid-template-columns: 1fr; padding: 40px 20px 32px; gap: 0; }
+        .hero h1 { font-size: 72px; line-height: 66px; letter-spacing: -3px; margin-bottom: 20px; }
+        .hero-body { max-width: 100%; font-size: 13px; }
+        .hero-img-wrap { display: none; }
+
+        /* Features */
+        .features { padding: 40px 20px; }
+        .features-inner { grid-template-columns: 1fr; gap: 28px; }
+
+        /* Aus Banner */
+        .aus-banner { padding: 18px 20px; }
+        .aus-banner-line { display: none; }
+
+        /* Trusted By */
+        .trusted { padding: 36px 20px; }
+        .trusted-inner { flex-direction: column; gap: 20px; align-items: flex-start; }
+
+        /* Products */
+        .products { padding: 48px 20px 56px; }
+        .prod-heading { font-size: 40px; }
+        .prod-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+        .prod-img { min-height: 140px; }
+        .prod-img img { max-height: 140px; }
+
+        /* Specs */
+        .specs { padding: 28px 16px; }
+        .specs-card { grid-template-columns: 1fr; min-height: auto; border-radius: 20px; }
+        .specs-left { padding: 36px 24px 28px; }
+        .specs-heading { font-size: 28px; }
+        .specs-right { margin: 0 16px 20px; min-height: 240px; border-radius: 16px; }
+        .spec-img-col img { max-height: 180px; }
+        .specs-corner.tr, .specs-corner.bl { display: none; }
+
+        /* CTA */
+        .cta { padding: 60px 20px; }
+        .cta-inner h2 { font-size: 32px; margin-bottom: 28px; }
+        .cta-info-row { flex-direction: column; gap: 0; }
+        .cta-info-item { padding: 16px 0; width: 100%; justify-content: center; }
+        .cta-info-item + .cta-info-item { border-left: none; border-top: 1px solid rgba(0,0,0,0.15); }
+        .btn-cta-dark, .btn-cta-outline { padding: 16px 32px; width: 100%; text-align: center; }
+
+        /* Footer */
+        footer { padding: 40px 20px 0; }
+        .footer-top { grid-template-columns: 1fr; gap: 28px; }
+        .footer-bottom { flex-direction: column; align-items: flex-start; gap: 14px; }
+        .footer-mfr-logos { flex-wrap: wrap; }
+    }
+
+    @media (max-width: 480px) {
+        .hero h1 { font-size: 52px; line-height: 48px; letter-spacing: -2px; }
+        .prod-grid { grid-template-columns: 1fr; }
+        .cta-inner h2 { font-size: 26px; }
+        .spec-img-col img { max-height: 130px; }
+    }
     </style>
 </head>
 <body>
@@ -935,17 +1041,14 @@
 <!-- NAV -->
 <nav>
     <a href="#"><img src="logo.png" alt="Penetrene" class="nav-logo"></a>
+    <button class="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
         <li><a href="#products">Product Range</a></li>
         <li><a href="heritage.html">Our Heritage</a></li>
-        <li class="nav-dropdown">
-            <a href="#">Resources</a>
-            <div class="nav-dropdown-panel">
-                <a href="applications.html"><span class="drop-icon"></span>Applications</a>
-                <a href="sds.html"><span class="drop-icon"></span>Safety Data Sheets</a>
-                <a href="#"><span class="drop-icon"></span>Technical Data</a>
-            </div>
-        </li>
+        <li><a href="sds.html">SDS</a></li>
+        <li><a href="faq.html">FAQ</a></li>
         <li><a href="wheretobuy.html">Where To Buy</a></li>
         <li><a href="distributor.html" class="nav-distributor">Become a Distributor</a></li>
         <li><a href="quote.html" class="nav-cta">Get A Quote</a></li>
@@ -956,7 +1059,6 @@
 <section class="hero">
     <div class="hero-inner">
         <div style="padding-bottom: 60px;">
-            <p class="hero-eyebrow">Authentic Industrial Formulation. Established in 1924.</p>
             <h1>The <span class="red">Red</span> Oil<br><span class="yell">That Creeps</span></h1>
             <p class="hero-body">Precision engineered since 1924. A deep-penetrating chemical catalyst designed to fracture rust bonds and provide long-term surface stabilization in extreme environments.</p>
             <div class="hero-btns">
@@ -969,6 +1071,9 @@
         </div>
     </div>
 </section>
+
+
+
 
 <!-- FEATURES -->
 <section class="features">
@@ -997,19 +1102,7 @@
     </div>
 </section>
 
-<!-- AUS MADE BANNER -->
-<section class="aus-banner">
-    <div class="aus-banner-inner">
-        <div class="aus-banner-line"></div>
-        <div class="aus-banner-content">
-            <img src="brand_assets/AustralianMadeOutline@4x.png" alt="Australian Made and Owned" class="aus-banner-logo">
-            <div class="aus-banner-text">
-                <span class="aus-banner-label">Proudly Australian Made &amp; Owned</span>
-            </div>
-        </div>
-        <div class="aus-banner-line right"></div>
-    </div>
-</section>
+
 
 <!-- TRUSTED BY -->
 <section class="trusted">
@@ -1019,6 +1112,10 @@
         <div class="trusted-logos">
             <div class="t-logo">
                 <img src="brand_assets\blackwoodslogo.png" alt="BlackwoodsLogo" style="height:40px;">
+            </div>
+
+             <div class="t-logo">
+                <img src="brand_assets\motion-logo.png" alt="BlackwoodsLogo" style="height:24px;">
             </div>
         
         </div>
@@ -1040,42 +1137,42 @@
                 <p class="prod-name">Penetrene 250ml</p>
             </a>
 
-            <a href="#" class="prod-card">
+            <a href="products/pen500.html" class="prod-card">
                 <span class="prod-code">Code PEN500</span>
                 <div class="prod-img"><img src="product_images/transparent/PEN500.png" alt="Penetrene 500mL"></div>
                 <div class="prod-sep"></div>
                 <p class="prod-name">Penetrene 500ml</p>
             </a>
 
-            <a href="#" class="prod-card">
+            <a href="products/pen20.html" class="prod-card">
                 <span class="prod-code">Code PEN20</span>
                 <div class="prod-img"><img src="product_images/transparent/PEN20-min.png" alt="Penetrene 20L"></div>
                 <div class="prod-sep"></div>
                 <p class="prod-name">Penetrene 20L</p>
             </a>
 
-            <a href="#" class="prod-card">
+            <a href="products/penaerosol.html" class="prod-card">
                 <span class="prod-code">Code PEN400</span>
                 <div class="prod-img"><img src="product_images\transparent\PEN400-min-1.png" alt="Penetrene 400g Aerosol"></div>
                 <div class="prod-sep"></div>
                 <p class="prod-name">Penetrene 400g Aerosol</p>
             </a>
 
-            <a href="#" class="prod-card">
+            <a href="products/pen5.html" class="prod-card">
                 <span class="prod-code">Code PEN5</span>
                 <div class="prod-img"><img src="product_images/transparent/Pen5.png" alt="Penetrene 5L"></div>
                 <div class="prod-sep"></div>
                 <p class="prod-name">Penetrene 5L</p>
             </a>
 
-            <a href="#" class="prod-card">
+            <a href="products/penspray.html" class="prod-card">
                 <span class="prod-code">Code PENSPRAY</span>
                 <div class="prod-img"><img src="product_images/transparent/PenSpray.png" alt="Penetrene 1L Spray"></div>
                 <div class="prod-sep"></div>
                 <p class="prod-name">Penetrene 1L Spray</p>
             </a>
 
-            <a href="#" class="prod-card">
+            <a href="products/pen200l.html" class="prod-card">
                 <span class="prod-code">Code PEN200</span>
                 <div class="prod-img"><img src="product_images/transparent/Pen200.png" alt="Penetrene 200L Drum"></div>
                 <div class="prod-sep"></div>
@@ -1085,6 +1182,22 @@
         </div>
     </div>
 </section>
+
+<!-- AUS MADE BANNER -->
+<section class="aus-banner">
+    <div class="aus-banner-inner">
+        <div class="aus-banner-line"></div>
+        <div class="aus-banner-content">
+            <img src="brand_assets/AustralianMadeOutline@4x.png" alt="Australian Made and Owned" class="aus-banner-logo">
+            <div class="aus-banner-text">
+                <span class="aus-banner-label">Proudly Australian Made &amp; Owned</span>
+            </div>
+        </div>
+        <div class="aus-banner-line right"></div>
+    </div>
+</section>
+
+
 
 <!-- SPECS -->
 <section class="specs">
@@ -1100,15 +1213,15 @@
             <p class="specs-body">Physical and chemical properties for Penetrene Q3000 Red Oil formulation. Source: Safety Data Sheet (SDS), February 2026.</p>
             <div class="spec-row">
                 <span class="spec-key">Flash Point</span>
-                <span class="spec-val">70°C (Closed Cup)</span>
+                <span class="spec-val" data-count="70" data-suffix="°C (Closed Cup)">70°C (Closed Cup)</span>
             </div>
             <div class="spec-row">
                 <span class="spec-key">Specific Gravity</span>
-                <span class="spec-val">0.08 @ 21°C</span>
+                <span class="spec-val" data-count="0.08" data-suffix=" @ 21°C" data-decimals="2">0.08 @ 21°C</span>
             </div>
             <div class="spec-row">
                 <span class="spec-key">Boiling Point</span>
-                <span class="spec-val">193°C</span>
+                <span class="spec-val" data-count="193" data-suffix="°C">193°C</span>
             </div>
             <div class="spec-row">
                 <span class="spec-key">Solubility in Water</span>
@@ -1119,7 +1232,7 @@
         <div class="specs-right">
             <div class="spec-stat top-left">
                 <span class="spec-stat-label">Percent Volatiles</span>
-                <span class="spec-stat-val">74%</span>
+                <span class="spec-stat-val" data-count="74" data-suffix="%">74%</span>
             </div>
             <div class="spec-img-col">
                 <img src="product_images/transparent/Penetrene_250.png" alt="Penetrene 250mL">
@@ -1213,8 +1326,65 @@
 <script>
     const nav = document.querySelector('nav');
     window.addEventListener('scroll', () => {
-        nav.classList.toggle('scrolled', window.scrollY > 10);
+        const y = window.scrollY;
+        if (y > 30) nav.classList.add('scrolled');
+        else if (y < 10) nav.classList.remove('scrolled');
     }, { passive: true });
+
+    // Fit watermark to full page width
+    const wm = document.querySelector('.cta-wm');
+    function fitWatermark() {
+        wm.style.fontSize = '100px';
+        wm.style.letterSpacing = '0';
+        const textW = wm.getBoundingClientRect().width;
+        const scale = window.innerWidth / textW;
+        wm.style.fontSize = (100 * scale) + 'px';
+    }
+    document.fonts.ready.then(() => {
+        fitWatermark();
+        window.addEventListener('resize', fitWatermark, { passive: true });
+    });
+
+    document.querySelector('.nav-hamburger').addEventListener('click', () => {
+        nav.classList.toggle('nav-open');
+    });
+
+    // Close nav when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(a => {
+        a.addEventListener('click', () => nav.classList.remove('nav-open'));
+    });
+
+    // ── SPEC COUNT-UP ─────────────────────────────────
+    function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+    function countUp(el, target, decimals, suffix, duration) {
+        const start = performance.now();
+        function tick(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const value = easeOutCubic(progress) * target;
+            el.textContent = value.toFixed(decimals) + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+
+    const specsSection = document.querySelector('.specs');
+    let counted = false;
+
+    const specObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting && !counted) {
+            counted = true;
+            document.querySelectorAll('[data-count]').forEach((el, i) => {
+                const target = parseFloat(el.dataset.count);
+                const suffix = el.dataset.suffix || '';
+                const decimals = parseInt(el.dataset.decimals || '0');
+                setTimeout(() => countUp(el, target, decimals, suffix, 1400), i * 120);
+            });
+        }
+    }, { threshold: 0.3 });
+
+    specObserver.observe(specsSection);
 </script>
 </body>
 </html>
