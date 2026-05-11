@@ -4,303 +4,71 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="brand_assets/penfav2@4x.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applications — Penetrene Industrial</title>
+    <meta name="description" content="Penetrene penetrating oil is proven across mining, marine, agriculture, construction, manufacturing and automotive industries throughout Australia.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.penetrene.com.au/applications.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Penetrene Industrial">
+    <meta property="og:title" content="Applications — Penetrene Penetrating Oil for Every Industry">
+    <meta property="og:description" content="Penetrene penetrating oil is proven across mining, marine, agriculture, construction, manufacturing and automotive industries throughout Australia.">
+    <meta property="og:url" content="https://www.penetrene.com.au/applications.html">
+    <meta property="og:image" content="https://www.penetrene.com.au/product_images/PenetreneFamily_png.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Applications — Penetrene Penetrating Oil for Every Industry">
+    <meta name="twitter:description" content="Penetrene penetrating oil is proven across mining, marine, agriculture, construction, manufacturing and automotive industries throughout Australia.">
+    <meta name="twitter:image" content="https://www.penetrene.com.au/product_images/PenetreneFamily_png.webp">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Penetrene Industrial","url":"https://www.penetrene.com.au","logo":"https://www.penetrene.com.au/brand_assets/PenetrenePNG.svg","description":"Australia's most trusted penetrating oil and industrial lubricant since 1924.","telephone":"+61393984444","email":"sales@advancechemicals.com.au","address":{"@type":"PostalAddress","addressCountry":"AU"},"foundingDate":"1924"}</script>
+    <title>Applications — Penetrene Penetrating Oil for Every Industry</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet">
-    <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-        --y: #FFD000;
-        --r: #CC0000;
-        --black: #000;
-        --dark: #111;
-        --dark2: #1a1a1a;
-        --w: #fff;
-        --bg: #EAEAEA;
-        --card: #ebebeb;
-        --display: 'Open Sans', sans-serif;
-        --body: 'Open Sans', sans-serif;
-        --radius: 20px;
-    }
-
-    body {
-        font-family: var(--body);
-        background: var(--bg);
-        color: var(--black);
-        overflow-x: hidden;
-    }
-
-    /* ── NAV ──────────────────────────────────────── */
-    nav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background: var(--black);
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 40px;
-        transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    nav.scrolled { height: 60px; }
-
-    .nav-logo {
-        height: 44px;
-        display: block;
-        transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    nav.scrolled .nav-logo { height: 28px; }
-
-    .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 28px;
-        list-style: none;
-    }
-
-    .nav-links a {
-        font-family: var(--display);
-        font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255,255,255,0.85);
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--w); }
-
-    .nav-distributor {
-        font-family: var(--display);
-        font-weight: 700;
-        font-size: 13px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(255,255,255,0.85) !important;
-        background: transparent;
-        padding: 7px 16px;
-        border-radius: 4px;
-        border: 1.5px solid rgba(255,255,255,0.25);
-        text-decoration: none;
-        transition: border-color 0.2s, color 0.2s;
-    }
-
-    .nav-distributor:hover { border-color: rgba(255,255,255,0.6); color: var(--w) !important; }
-
-    .nav-cta {
-        font-family: var(--display);
-        font-weight: 700;
-        font-size: 13px;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: var(--black) !important;
-        background: var(--y);
-        padding: 8px 18px;
-        border-radius: 4px;
-        text-decoration: none;
-        transition: opacity 0.2s;
-    }
-
-    .nav-cta:hover { opacity: 0.88; }
-
-    .nav-dropdown { position: relative; }
-    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; cursor: pointer; }
-    .nav-dropdown > a::after { content: ''; display: block; width: 6px; height: 6px; border-right: 1.5px solid rgba(255,255,255,0.6); border-bottom: 1.5px solid rgba(255,255,255,0.6); transform: rotate(45deg) translateY(-2px); transition: transform 0.2s; }
-    .nav-dropdown:hover > a::after { transform: rotate(225deg) translateY(-2px); }
-    .nav-dropdown-panel { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(-4px); background: #111; border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; min-width: 200px; padding: 12px 8px 8px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.18s, transform 0.18s; box-shadow: 0 16px 48px rgba(0,0,0,0.6); }
-    .nav-dropdown:hover .nav-dropdown-panel { opacity: 1; visibility: visible; pointer-events: all; transform: translateX(-50%) translateY(0); }
-    .nav-dropdown-panel a { display: block; font-family: var(--display); font-weight: 600; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7) !important; text-decoration: none; padding: 10px 14px; border-radius: 5px; transition: background 0.15s, color 0.15s; }
-    .nav-dropdown-panel a:hover { background: rgba(255,255,255,0.06); color: #fff !important; }
-    .drop-icon { display: inline-block; width: 6px; height: 6px; background: var(--y); border-radius: 50%; margin-right: 8px; vertical-align: middle; position: relative; top: -1px; }
-
-    /* ── HERO ─────────────────────────── */
-    .hero {
-        background: #1a1a1a;
-        padding: 72px 40px 64px;
-    }
-
-    .hero-inner {
-        max-width: 1280px;
-        margin: 0 auto;
-    }
-
-    .hero h1 {
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 800;
-        font-style: italic;
-        font-size: 80px;
-        letter-spacing: -0.03em;
-        text-transform: uppercase;
-        color: #EEEEF0;
-        line-height: 1;
-        margin-bottom: 16px;
-    }
-
-    .hero h1 span { color: var(--y); }
-
-    .hero-desc {
-        font-size: 14px;
-        line-height: 1.7;
-        color: rgba(255,255,255,0.45);
-        max-width: 480px;
-    }
-
-    /* ── APPLICATIONS GRID ────────────────────────── */
-    .apps-section {
-        padding: 60px 40px 80px;
-        max-width: 1280px;
-        margin: 0 auto;
-    }
-
-    .apps-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        gap: 16px;
-    }
-
-    /* Full-width featured card */
-    .app-card--wide {
-        grid-column: 1 / -1;
-    }
-
-    /* ── CARD ─────────────────────────────────────── */
-    .app-card {
-        position: relative;
-        border-radius: var(--radius);
-        overflow: hidden;
-        display: block;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    /* Tall cards */
-    .app-card--tall .app-card-img {
-        aspect-ratio: 4 / 3;
-    }
-
-    /* Wide/panoramic cards */
-    .app-card--wide .app-card-img {
-        aspect-ratio: 21 / 7;
-    }
-
-    /* Standard cards */
-    .app-card--std .app-card-img {
-        aspect-ratio: 16 / 9;
-    }
-
-    .app-card-img {
-        width: 100%;
-        display: block;
-        object-fit: cover;
-        border-radius: var(--radius);
-        transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .app-card:hover .app-card-img {
-        transform: scale(1.04);
-    }
-
-    /* Gradient overlay at bottom */
-    .app-card::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        border-radius: var(--radius);
-        background: linear-gradient(
-            to top,
-            rgba(0,0,0,0.72) 0%,
-            rgba(0,0,0,0.28) 35%,
-            transparent 65%
-        );
-        pointer-events: none;
-        transition: opacity 0.3s;
-    }
-
-    .app-card:hover::after {
-        opacity: 0.85;
-    }
-
-    /* Label inside card */
-    .app-label {
-        position: absolute;
-        bottom: 24px;
-        left: 28px;
-        z-index: 2;
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 800;
-        font-size: clamp(22px, 2.4vw, 34px);
-        letter-spacing: -0.01em;
-        color: #fff;
-        line-height: 1;
-        transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    .app-card--wide .app-label {
-        font-size: clamp(26px, 3vw, 44px);
-        bottom: 28px;
-        left: 36px;
-    }
-
-    .app-card:hover .app-label {
-        transform: translateY(-3px);
-    }
-
-
-    /* ── FOOTER ──────────────────────────────── */
-    footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.07); padding: 56px 40px 0; }
-    .footer-inner { max-width: 1280px; margin: 0 auto; }
-    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 56px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .footer-logo { height: 34px; display: block; margin-bottom: 14px; }
-    .footer-tagline { font-family: var(--display); font-weight: 700; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--y); margin-bottom: 10px; }
-    .footer-brand p { font-size: 12px; line-height: 1.7; color: rgba(255,255,255,0.3); max-width: 270px; margin-bottom: 20px; }
-    .footer-social { display: flex; gap: 10px; }
-    .footer-social a { width: 32px; height: 32px; border: 1px solid rgba(255,255,255,0.12); border-radius: 4px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: border-color 0.2s; }
-    .footer-social a:hover { border-color: rgba(255,255,255,0.35); }
-    .footer-social svg { width: 13px; height: 13px; fill: none; stroke: rgba(255,255,255,0.45); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-    .footer-col-title { font-family: var(--display); font-weight: 700; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.25); margin-bottom: 18px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 12px; }
-    .footer-col ul a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
-    .footer-col ul a:hover { color: var(--w); }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; gap: 24px; flex-wrap: wrap; }
-    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.18); }
-    .footer-mfr-logos { display: flex; align-items: center; gap: 28px; }
-    .footer-mfr-logos img { height: 20px; opacity: 0.45; display: block; transition: opacity 0.2s; }
-    .footer-mfr-logos img:hover { opacity: 0.75; }
-    .footer-aus-logo { height: 48px !important; opacity: 0.9 !important; }
-    .footer-aus-logo:hover { opacity: 1 !important; }
-    .footer-bot-links { display: flex; gap: 20px; }
-    .footer-bot-links a { font-size: 11px; color: rgba(255,255,255,0.18); text-decoration: none; transition: color 0.2s; }
-    .footer-bot-links a:hover { color: rgba(255,255,255,0.45); }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="applications.css">
 </head>
 <body>
 
+<!-- TOPBAR -->
+<div class="topbar">
+    <div class="topbar-contact">
+        <a href="tel:0393984444" class="topbar-phone">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            (03) 9398 4444
+        </a>
+        <span class="topbar-divider">|</span>
+        <a href="mailto:sales@advancechemicals.com.au" class="topbar-phone">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            sales@advancechemicals.com.au
+        </a>
+    </div>
+</div>
+
 <!-- NAV -->
 <nav>
-    <a href="index.html"><img src="logo.png" alt="Penetrene" class="nav-logo"></a>
-    <ul class="nav-links">
-        <li><a href="index.html#products">Product Range</a></li>
-        <li><a href="heritage.html">Our Heritage</a></li>
-        <li><a href="sds.html">SDS</a></li>
+    <a href="index.html"><img src="brand_assets/PenetrenePNG.svg" alt="Penetrene" class="nav-logo"></a>
+    <button class="nav-hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
+        <ul class="nav-links">
+        <li class="nav-mobile-logo"><img src="brand_assets/PenetrenePNG.svg" alt="Penetrene"></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="heritage.html">Heritage</a></li>
+        <li><a href="applications.html">Applications</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="wheretobuy.html">Where To Buy</a></li>
-        <li><a href="distributor.html" class="nav-distributor">Become a Distributor</a></li>
-        <li><a href="quote.html" class="nav-cta">Get A Quote</a></li>
+        <li><a href="wheretobuy.html">Where to Buy</a></li>
+        <li><a href="sds.html">SDS</a></li>
+        <li><a href="distributor.html">Distribution</a></li>
+        <li><a href="quote.html" class="nav-distributor">Get a Quote</a></li>
+        <li><a href="wheretobuy.html" class="nav-cta">Buy Online</a></li>
     </ul>
+    <button class="nav-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
     <div class="hero-inner">
-        <h1>Appli<span>cations</span></h1>
+        <h1>Applications</h1>
         <p class="hero-desc">Penetrene is trusted across mining, marine, agriculture, construction, and heavy industry. Discover where Australia's toughest conditions meet their match.</p>
     </div>
 </section>
@@ -310,38 +78,38 @@
     <div class="apps-grid">
 
         <!-- Mining — wide featured -->
-        <a href="#" class="app-card app-card--wide">
-            <img class="app-card-img" src="https://placehold.co/1400x467/5c3d1a/8B6030?text=+" alt="Mining">
+        <a href="applications/mining.html" class="app-card app-card--wide">
+            <img class="app-card-img" src="images/a-mining-project-in-a-remote-5b693321-58af-4338-99ea-f43d4a34bf43.webp" alt="Mining">
             <span class="app-label">Mining</span>
         </a>
 
         <!-- Marine -->
-        <a href="#" class="app-card app-card--std">
-            <img class="app-card-img" src="https://placehold.co/780x439/0d2a42/1a4a70?text=+" alt="Marine">
+        <a href="applications/marine.html" class="app-card app-card--std">
+            <img class="app-card-img" src="images/Marine_1-scaled.jpg" alt="Marine">
             <span class="app-label">Marine</span>
         </a>
 
         <!-- Agriculture -->
-        <a href="#" class="app-card app-card--std">
-            <img class="app-card-img" src="https://placehold.co/780x439/2a3d1a/3d5c28?text=+" alt="Agriculture">
+        <a href="applications/agriculture.html" class="app-card app-card--std">
+            <img class="app-card-img" src="images/shutterstock_2256437237-1024x576.jpg" alt="Agriculture">
             <span class="app-label">Agriculture</span>
         </a>
 
         <!-- Construction -->
-        <a href="#" class="app-card app-card--std">
-            <img class="app-card-img" src="https://placehold.co/780x439/2e2112/4a3320?text=+" alt="Construction">
+        <a href="applications/construction.html" class="app-card app-card--std">
+            <img class="app-card-img" src="images/Confined-spaces-026-3-scaled-e1743228762996.jpg" alt="Construction">
             <span class="app-label">Construction</span>
         </a>
 
         <!-- Automotive -->
-        <a href="#" class="app-card app-card--std">
-            <img class="app-card-img" src="https://placehold.co/780x439/1a1a1a/2e2e2e?text=+" alt="Automotive">
+        <a href="applications/automotive.html" class="app-card app-card--std">
+            <img class="app-card-img" src="images/AutomotiveTraining.jpg" alt="Automotive">
             <span class="app-label">Automotive</span>
         </a>
 
         <!-- Manufacturing — wide featured -->
-        <a href="#" class="app-card app-card--wide">
-            <img class="app-card-img" src="https://placehold.co/1400x467/1a2433/263547?text=+" alt="Manufacturing">
+        <a href="applications/manufacturing.html" class="app-card app-card--wide">
+            <img class="app-card-img" src="images/Capgemini_industrial-manufacturing.webp" alt="Manufacturing">
             <span class="app-label">Manufacturing</span>
         </a>
 
@@ -353,7 +121,7 @@
     <div class="footer-inner">
         <div class="footer-top">
             <div class="footer-brand">
-                <img src="logo.png" alt="Penetrene" class="footer-logo">
+                <img src="brand_assets/PenetrenePNG.svg" alt="Penetrene" class="footer-logo">
                 <p class="footer-tagline">The Red Oil That Creeps</p>
                 <p>Precision engineered since 1924 for heavy industry, maritime, and maintenance applications across Australia.</p>
                 <div class="footer-social">
@@ -386,9 +154,9 @@
         <div class="footer-bottom">
             <span class="footer-copy">&copy; 2026 Penetrene Industrial. All rights reserved.</span>
             <div class="footer-mfr-logos">
-                <img src="brand_assets/AusrtralianMADE.png" alt="Australian Made and Owned" class="footer-aus-logo">
-                <img src="brand_assets/advancelogowhite.png" alt="Advance Chemicals">
-                <img src="brand_assets/QuickSmartLogoWhite.png" alt="Quick Smart Products">
+                <img src="brand_assets/AusrtralianMADE.png" alt="Australian Made and Owned" class="footer-aus-logo" loading="lazy">
+                <img src="brand_assets/advancelogowhite.png" alt="Advance Chemicals" loading="lazy">
+                <img src="brand_assets/QuickSmartLogoWhite.png" alt="Quick Smart Products" loading="lazy">
             </div>
             <div class="footer-bot-links">
                 <a href="#">Privacy</a>
@@ -403,6 +171,11 @@
     window.addEventListener('scroll', () => {
         nav.classList.toggle('scrolled', window.scrollY > 10);
     }, { passive: true });
+
+    const burger = document.querySelector('.nav-hamburger');
+    if (burger) burger.addEventListener('click', () => nav.classList.toggle('nav-open'));
+    document.querySelector('.nav-close')?.addEventListener('click', () => nav.classList.remove('nav-open'));
+    document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => nav.classList.remove('nav-open')));
 </script>
 </body>
 </html>

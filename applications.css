@@ -1,0 +1,80 @@
+:root { --bg: #EAEAEA; --radius: 20px; }
+body { background: var(--bg); }
+
+/* HERO */
+.hero { background: #1a1a1a; padding: 72px 40px 64px; }
+.hero-inner { max-width: 1280px; margin: 0 auto; }
+.hero h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 80px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #EEEEF0;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+.hero h1 span { color: var(--y); }
+.hero-desc { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 480px; }
+
+/* APPLICATIONS GRID */
+.apps-section { padding: 60px 40px 80px; max-width: 1280px; margin: 0 auto; }
+.apps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.app-card--wide { grid-column: 1 / -1; }
+.app-card {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+.app-card--tall .app-card-img { aspect-ratio: 4 / 3; }
+.app-card--wide .app-card-img { aspect-ratio: 21 / 7; }
+.app-card--std .app-card-img { aspect-ratio: 16 / 9; }
+.app-card-img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: var(--radius);
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.app-card:hover .app-card-img { transform: scale(1.04); }
+.app-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.28) 35%, transparent 65%);
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.app-card:hover::after { opacity: 0.85; }
+.app-label {
+    position: absolute;
+    bottom: 24px;
+    left: 28px;
+    z-index: 2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: clamp(22px, 2.4vw, 34px);
+    letter-spacing: -0.01em;
+    color: #fff;
+    line-height: 1;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.app-card--wide .app-label { font-size: clamp(26px, 3vw, 44px); bottom: 28px; left: 36px; }
+.app-card:hover .app-label { transform: translateY(-3px); }
+
+@media (max-width: 768px) {
+    .hero { padding: 48px 20px 40px; }
+    .hero h1 { font-size: clamp(42px, 12vw, 64px); }
+    .apps-section { padding: 32px 16px 56px; }
+    .apps-grid { grid-template-columns: 1fr; gap: 12px; }
+    .app-card--wide { grid-column: 1; }
+    .app-card--wide .app-card-img { aspect-ratio: 16 / 9; }
+    .app-label { font-size: clamp(20px, 6vw, 28px); bottom: 18px; left: 20px; }
+    .app-card--wide .app-label { font-size: clamp(22px, 6vw, 30px); bottom: 18px; left: 20px; }
+}
+@media (max-width: 480px) { .hero h1 { font-size: 38px; } }

@@ -1,0 +1,103 @@
+:root { --bg: #EAEAEA; }
+body { background: var(--bg); }
+
+/* HERO */
+.hero { background: #1a1a1a; padding: 72px 40px 64px; }
+.hero-inner { max-width: 1280px; margin: 0 auto; }
+.hero h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 80px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #EEEEF0;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+.hero h1 span { color: var(--y); }
+.hero-desc { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.45); max-width: 480px; }
+.page-rule { width: 52px; height: 4px; background: var(--y); }
+
+/* MAIN CONTENT */
+.content { padding: 60px 0 96px; }
+.content-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: start;
+}
+.col-heading { font-family: 'Open Sans', sans-serif; font-weight: 800; font-size: 20px; letter-spacing: -0.02em; color: var(--black); margin-bottom: 16px; }
+
+/* STOCKIST ROWS */
+.stock-list { display: flex; flex-direction: column; gap: 8px; }
+.stock-row {
+    background: var(--w);
+    border-radius: 14px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: transform 0.2s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s;
+}
+.stock-row:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.09); }
+.stock-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--bg); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+.stock-icon svg { width: 18px; height: 18px; fill: none; stroke: rgba(0,0,0,0.4); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.stock-icon img { width: 32px; height: 32px; object-fit: contain; filter: grayscale(1); opacity: 0.6; }
+.stock-info { flex: 1; min-width: 0; }
+.stock-name { font-family: var(--display); font-weight: 700; font-size: 14px; color: var(--black); margin-bottom: 2px; }
+.stock-desc { font-size: 12px; color: rgba(0,0,0,0.45); line-height: 1.5; }
+.stock-badge { font-family: var(--display); font-weight: 600; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(0,0,0,0.4); background: var(--bg); border-radius: 4px; padding: 4px 8px; white-space: nowrap; flex-shrink: 0; }
+.stock-badge.online { color: #166534; background: #dcfce7; }
+.stock-badge.regional { color: #92400e; background: #fef3c7; }
+
+/* CTA STRIP */
+.cta-strip-wrap { padding: 0 40px 96px; max-width: 1280px; margin: 40px auto 0; }
+.cta-strip {
+    background: var(--black);
+    border-radius: 20px;
+    padding: 48px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+.cta-eyebrow { font-family: var(--display); font-weight: 600; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--y); margin-bottom: 10px; }
+.cta-title { font-family: 'Open Sans', sans-serif; font-weight: 800; font-size: 28px; color: #EEEEF0; letter-spacing: -0.02em; line-height: 1.15; }
+.btn-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--y);
+    color: var(--black);
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 16px;
+    font-style: italic;
+    text-transform: uppercase;
+    padding: 12px 26px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.btn-cta:hover { opacity: 0.88; }
+.btn-cta svg { width: 14px; height: 14px; fill: none; stroke: var(--black); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+@media (max-width: 768px) {
+    .hero { padding: 48px 20px 40px; }
+    .hero h1 { font-size: 48px; }
+    .hero-desc { font-size: 13px; }
+    .content { padding: 36px 0 60px; }
+    .content-inner { grid-template-columns: 1fr; padding: 0 20px; gap: 40px; }
+    .cta-strip-wrap { padding: 0 20px 60px; }
+    .cta-strip { padding: 32px 28px; flex-direction: column; align-items: flex-start; gap: 24px; }
+    .cta-title { font-size: 22px; }
+    .btn-cta { width: 100%; justify-content: center; }
+}
