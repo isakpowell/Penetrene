@@ -99,7 +99,7 @@ footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.07); padd
     }
     nav.nav-open .nav-links { display: flex; animation: navIn 0.22s cubic-bezier(0.22,1,0.36,1); }
     .nav-mobile-logo { display: flex; justify-content: center; margin-bottom: 16px; }
-    .nav-mobile-logo img { height: 72px; }
+    .nav-mobile-logo img { height: 48px; }
     .nav-links li { width: auto; }
     .nav-links a { display: block; padding: 14px 40px; font-size: 20px; text-align: center; }
     .nav-links a:hover { color: #FFD000 !important; opacity: 1 !important; }
