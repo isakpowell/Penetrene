@@ -701,6 +701,7 @@
 
 /* ── RESPONSIVE ───────────────────────────────── */
 @media (max-width: 768px) {
+    .products-wm { display: none; }
     /* Hero */
     .hero { min-height: auto; }
     .hero-inner { grid-template-columns: 1fr; padding: 40px 20px 32px; gap: 0; }
